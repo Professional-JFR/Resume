@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Javier Antonio Flores-Rendon - Resume</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    :root{
+      --paper-w: 8.5in;
+      --paper-h: 11in;
+      --page-pad-top: 0.35in;
+      --page-pad-x: 0.35in;
+      --page-pad-bottom: 0.35in;
+    }
+
+    html, body{
+      margin:0;
+      padding:0;
+      background:#e9e9e9;
+      color:#111;
+      font-family: Arial, Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body{
+      padding:20px 0 28px;
+    }
+
+    .no-print{
+      text-align:center;
+      margin-bottom:12px;
+    }
+
+    .btn-download{
+      border:0;
+      border-radius:3px;
+      background:#111;
+      color:#fff;
+      padding:7px 16px;
+      font-size:12px;
+      cursor:pointer;
+    }
+
+    .btn-download:hover{ background:#2a2a2a; }
+
+    /* ---------- SCREEN PAGE ---------- */
+    .page{
+      width: var(--paper-w);
+      min-height: var(--paper-h);
+      margin: 0 auto 18px;
+      background: #fff;
+      padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    /* Header specs from your image */
+    .resume-header{
+      text-align:center;
+      margin:0 0 10px;
+      line-height:1.2;
+    }
+
+    .resume-header h1{
+      margin:0 0 4px;
+      font-size:14pt;     /* required */
+      font-weight:700;    /* required */
+      line-height:1.2;   /* required */
+    }
+
+    .contact-line{
+      margin:0;
+      font-size:12pt;     /* required */
+      font-weight:400;    /* required */
+      line-height:1.2;   /* required */
+    }
+
+    .contact-line .sep{ margin:0 6px; color:#333; }
+
+    /* Everything below header */
+    main, section, .entry-title, .entry-meta, li, .skills-list li, .entry-sub{
+      font-size:10.5pt;   /* required */
+      line-height:1.5;    /* required */
+    }
+
+    section{
+      margin:0 0 10px;     /* single-space feel between sections */
+      page-break-inside:avoid;
+      break-inside:avoid;
+    }
+
+    .section-title{
+      margin:0 0 4px;
+      font-size:10.5pt;
+      font-weight:700;    /* bold only */
+      line-height:1.5;
+    }
+
+    .entry-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:baseline;
+      gap:8px;
+      margin:0;           /* no extra space here */
+    }
+
+    .entry-title{
+      font-style:italic;  /* required */
+      font-weight:400;
+      margin:0;
+      flex:1;
+      min-width:0;
+    }
+
+    .entry-meta{
+      font-style:italic;  /* required */
+      font-weight:400;
+      margin-left:auto;
+      white-space:nowrap;
+      text-align:right;
+    }
+
+    ul{
+      margin:0;
+      padding-left:20px;
+    }
+
+    li{
+      margin:0;           /* avoid extra vertical spacing */
+      font-weight:400;
+    }
+
+    .exp-item{
+      margin:0 0 8px;     /* single-space between entries */
+    }
+    .exp-item:last-child{ margin-bottom:0; }
+
+    .skills-list{
+      list-style:none;
+      margin:0;
+      padding:0;
+    }
+
+    .skills-list li{
+      margin:0;
+    }
+
+    .entry-sub{
+      margin:4px 0 0;
+      font-weight:400;
+    }
+
+    .b{ font-weight:700; }
+
+    /* links should visually match plain text */
+    a, a:visited{
+      color:#111;
+      text-decoration:none;
+      font-weight:inherit;
+    }
+
+    /* prevent injected pseudo-icons; type symbols manually */
+    a[href^="mailto:"]::before,
+    a[href*="linkedin.com"]::before,
+    a[href*="github.com"]::before{ content:""; }
+
+    /* ---------- PRINT/PDF ---------- */
+    @media print{
+      @page{
+        size: Letter;
+        margin: 0.35in; /* match spacing target */
+      }
+
+      html, body{
+        background:#fff !important;
+      }
+
+      body{
+        padding:0;
+      }
+
+      .no-print{ display:none; }
+
+      .page{
+        width:auto;
+        min-height:0;
+        margin:0;
+        padding:0;
+        box-shadow:none;
+        background:#fff;
+        overflow:visible;
+      }
+
+      /* Force exact 2-page split */
+      .page.page-1{
+        page-break-after:always;
+        break-after:page;
+      }
+
+      .page.page-2{
+        page-break-before:always;
+        break-before:page;
+      }
+
+      /* Keep exact typography in print to avoid vertical squash */
+      .resume-header h1{ font-size:14pt; line-height:1.15; margin:0 0 2px; }
+      .contact-line{ font-size:12pt; line-height:1.15; margin:0; }
+
+      .section-title,
+      .entry-title,
+      .entry-meta,
+      li,
+      .skills-list li,
+      .entry-sub{
+        font-size:10.5pt !important;
+        line-height:1.5 !important;
+      }
+
+      section{ margin:0 0 6px; }
+      .exp-item{ margin:0 0 6px; }
+      ul{ margin:0; padding-left:18px; }
+
+      .exp-item, section, .entry-header, ul, li{
+        page-break-inside:avoid !important;
+        break-inside:avoid !important;
+      }
+
+      a{
+        color:#111 !important;
+        text-decoration:none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="no-print">
+    <button class="btn-download" onclick="window.print()">⬇ Save as PDF</button>
+  </div>
+
+  <!-- PAGE 1 -->
+  <div class="page page-1">
+    <header class="resume-header">
+      <h1>Javier Antonio Flores-Rendon</h1>
+      <p class="contact-line">
+        U.S. Citizen in Tempe, AZ
+        <span class="sep">|</span>
+        <a href="mailto:javierflores789@gmail.com">✉ javierflores789@gmail.com</a>
+        <span class="sep">|</span>
+        (602) 366-0216
+        <span class="sep">|</span>
+        <a href="https://www.linkedin.com/in/javier-flores-rendon-437a43194/" target="_blank" rel="noopener noreferrer">↗ linkedin.com/in/javier-flores-rendon-437a43194</a>
+        <span class="sep">|</span>
+        <a href="https://github.com/Professional-JFR" target="_blank" rel="noopener noreferrer">↗ github.com/Professional-JFR</a>
+      </p>
+    </header>
+
+    <main>
+      <section>
+        <h2 class="section-title">Education</h2>
+        <div class="entry-header">
+          <span class="entry-title">M.S. in Computer Science | Grand Canyon University - Phoenix, AZ | GPA: 3.98 / 4.00</span>
+          <span class="entry-meta">Status - Graduated</span>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Relevant Experience</h2>
+
+        <div class="exp-item">
+          <div class="entry-header">
+            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/SignalFlow" target="_blank">SignalFlow</a> &nbsp;|&nbsp; ↗ <a href="https://signalflow-ingest.onrender.com" target="_blank">Live API</a> &nbsp;|&nbsp; ↗ <a href="https://signalflow-ingest.onrender.com/actuator/health" target="_blank">Health Check</a></span>
+            <span class="entry-meta">2026</span>
+          </div>
+          <ul>
+            <li>Built and deployed a <span class="b">Java Spring Boot</span> backend service with <span class="b">RESTful APIs, SQL (PostgreSQL), Docker</span>, and cloud hosting to support reliable log/event ingestion at scale, sustaining <span class="b">~4.0K events/sec</span>.</li>
+            <li>Applied backend engineering and observability practices using <span class="b">Actuator</span>, health checks, and performance testing to validate production readiness, achieving <span class="b">2.8 ms p95 latency</span> with <span class="b">0% request failures</span> during k6 tests.</li>
+            <li>Troubleshot and fixed deployment/runtime issues across <span class="b">Docker</span>, JDBC config, and environment routing to improve reliability and deliver consistent production operation.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="entry-header">
+            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/AsyncTaskEngine" target="_blank">Async Task Engine</a></span>
+            <span class="entry-meta">2026</span>
+          </div>
+          <ul>
+            <li>Built a backend task-processing API using <span class="b">JavaScript / Node.js</span> and <span class="b">RESTful APIs</span> to support non-blocking asynchronous workflows, reaching <span class="b">8,827 req/s</span> on task creation.</li>
+            <li>Used load testing and benchmarking tools (k6/autocannon) to verify scalable API behavior under sustained traffic, achieving <span class="b">44.81 ms average latency</span> (<span class="b">84 ms p99</span>).</li>
+            <li>Implemented webhook-driven completion flow and reliability checks to improve cross-service delivery behavior, reaching <span class="b">92.24% delivery success</span>.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="entry-header">
+            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/ShipSafeFlags" target="_blank">ShipSafeFlags</a></span>
+            <span class="entry-meta">2026</span>
+          </div>
+          <ul>
+            <li>Built a full-stack feature-flag platform using <span class="b">TypeScript/JavaScript, Node.js, React, RESTful APIs, SQL (PostgreSQL), and Docker</span> to enable controlled feature releases.</li>
+            <li>Implemented rule evaluation, caching, optimistic concurrency, and <span class="b">SSE updates</span> to improve rollout safety and real-time visibility for cross-functional teams.</li>
+            <li>Integrated CI/CD workflows and reproducible performance tests to validate production-like throughput, sustaining <span class="b">~380K-416K requests/min</span> (~<span class="b">6.3K-6.9K req/s</span> aggregate).</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="entry-header">
+            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/A.I.-Incident-Triage" target="_blank">A.I.-Incident-Triage</a></span>
+            <span class="entry-meta">2026</span>
+          </div>
+          <ul>
+            <li>Built an Artificial Intelligence (A.I.) Incident Triage <span class="b">Copilot</span> with <span class="b">Python/FastAPI, PostgreSQL, Redis, Docker, and REST APIs</span> to process incident alerts through reliable <span class="b">REST APIs</span> in a production-style backend setup. Achieved 100% demo health/readiness success (/health, /ready).</li>
+            <li>Implemented A.I.-style triage intelligence for severity prediction, duplicate detection, and runbook recommendation, achieving 3/3 inference field coverage on triage output.</li>
+            <li>Validated an end-to-end incident workflow (ingest → triage → persist → retrieve) with 100% demo execution success using POST /incidents/triage and GET /incidents/{incident_id}.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="entry-header">
+            <span class="entry-title">IT Intern - Great Hearts Academy</span>
+            <span class="entry-meta">Scottsdale, AZ | Oct 2019 - May 2020</span>
+          </div>
+          <ul>
+            <li>Built fillable PDF forms to standardize workflows and reduce manual document effort.</li>
+            <li>Troubleshot hardware and software issues across campus devices to support daily operations.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="page page-2">
+    <section>
+      <h2 class="section-title">Skills</h2>
+      <ul class="skills-list">
+        <li>Languages: TypeScript, JavaScript, HTML, CSS, Java, Python, SQL, C++</li>
+        <li>Backend & APIs: RESTful APIs, Node.js, Spring Boot, Express.js, FastAPI, asynchronous processing, webhook integration</li>
+        <li>Data: SQL (PostgreSQL), Flyway, query optimization</li>
+        <li>Cloud & DevOps: Cloud (Render/AWS-ready), Docker, Docker Compose, CI/CD, GitHub Actions, Git, Linux</li>
+        <li>Frontend: React, React.js, Vite, Angular (familiar), Next.js (familiar), GraphQL (familiar)</li>
+        <li>Practices: Agile collaboration, cross-functional delivery, integration testing, performance benchmarking (k6, autocannon), observability (Spring Actuator, Prometheus)</li>
+        <li>Extra Credit: Large-scale load testing, AI tools (GitHub Copilot, ChatGPT, Claude), cross-functional execution</li>
+      </ul>
+    </section>
+
+    <p class="entry-sub">
+      <strong>Additional Background:</strong> Current, full-time, occupation is Crisis Therapist. Prior professional roles include Private Investigator, Case Manager, Paraprofessional, and Security Officer; additional education includes M.S. Forensic Psychology, B.S. Justice Studies (Cum Laude), A.A., and A.S.. Previously Vice President in Phi Theta Kappa, member of Phi Beta Lambda, and member of the National Society of Collegiate Scholars.
+    </p>
+  </div>
+</body>
+</html>
