@@ -148,9 +148,9 @@
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built and deployed a <span class="b">Java Spring Boot</span> backend service with <span class="b">RESTful APIs, SQL (PostgreSQL), Docker</span>, and cloud hosting to support reliable log/event ingestion at scale, sustaining <span class="b">~4.0K events/sec</span>.</li>
-            <li>Applied backend engineering and observability practices using <span class="b">Actuator</span>, health checks, and performance testing to validate production readiness, achieving <span class="b">2.8 ms p95 latency</span> with <span class="b">0% request failures</span> during k6 tests.</li>
-            <li>Troubleshot and fixed deployment/runtime issues across <span class="b">Docker</span>, JDBC config, and environment routing to improve reliability and deliver consistent production operation.</li
+            <li>Built a backend service that gives product and operations teams real-time health and metrics so they can find and fix problems faster. (<strong>observability</strong>, <strong>health checks</strong>)</li>
+            <li>Added health endpoints and monitoring to validate production readiness and speed incident detection.</li>
+            <li>Implemented the service using <strong>Java</strong> and <strong>Spring Boot</strong>, backed by <strong>PostgreSQL</strong> and deployed in <strong>Docker</strong> containers.</li>
           </ul>
         </div>
 
@@ -160,9 +160,9 @@
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built a backend task-processing API using <span class="b">JavaScript / Node.js</span> and <span class="b">RESTful APIs</span> to support non-blocking asynchronous workflows, reaching <span class="b">8,827 req/s</span> on task creation.</li>
-            <li>Used load testing and benchmarking tools (k6/autocannon) to verify scalable API behavior under sustained traffic, achieving <span class="b">44.81 ms average latency</span> (<span class="b">84 ms p99</span>).</li>
-            <li>Implemented webhook-driven completion flow and reliability checks to improve cross-service delivery behavior, reaching <span class="b">92.24% delivery success</span>.</li>
+            <li>Delivered a background task engine that keeps the user-facing app responsive by running long jobs outside the request flow. (<strong>asynchronous processing</strong>)</li>
+            <li>Used background workers and load testing to ensure tasks complete reliably and the UI stays responsive (metrics: <strong>44.81 ms</strong> avg latency; <strong>92.24%</strong> delivery success).</li>
+            <li>Built with <strong>Node.js</strong> and <strong>JavaScript</strong>, exposing <strong>REST</strong> APIs and using <strong>webhooks</strong> for reliable completion flows.</li>
           </ul>
         </div>
 
@@ -172,9 +172,9 @@
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built a full-stack feature-flag platform using <span class="b">TypeScript/JavaScript, Node.js, React, RESTful APIs, SQL (PostgreSQL), and Docker</span> to enable controlled feature releases.</li>
-            <li>Implemented rule evaluation, caching, optimistic concurrency, and <span class="b">SSE updates</span> to improve rollout safety and real-time visibility for cross-functional teams.</li>
-            <li>Integrated CI/CD workflows and reproducible performance tests to validate production-like throughput, sustaining <span class="b">~380K-416K requests/min</span> (~<span class="b">6.3K-6.9K req/s</span> aggregate).</li>
+            <li>Built a feature-flag platform so product teams can safely roll out or rollback features to selected user groups and reduce release risk. (<strong>feature flags</strong>)</li>
+            <li>Validated rollout safety and capacity using CI/CD and performance tests to minimize customer impact (metrics: sustained <strong>~380K–416K requests/min</strong> in tests).</li>
+            <li>Implemented the platform with <strong>TypeScript</strong>, <strong>Node.js</strong>, <strong>React</strong>, and <strong>PostgreSQL</strong>, adding caching, rule evaluation, and <strong>SSE</strong> for real-time updates.</li>
           </ul>
         </div>
 
@@ -184,9 +184,9 @@
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built an Artificial Intelligence (A.I.) Incident Triage <span class="b">Copilot</span> with <span class="b">Python/FastAPI, PostgreSQL, Redis, Docker, and REST APIs</span> to process incident alerts through reliable <span class="b">REST APIs</span> in a production-style backend setup.</li>
-            <li>Implemented A.I.-style triage intelligence for severity prediction, duplicate detection, and runbook recommendation, achieving 3/3 inference field coverage on triage output.</li>
-            <li>Validated an end-to-end incident workflow (ingest → triage → persist → retrieve) with 100% demo health/readiness success (/health, /ready) using POST /incidents/triage and GET /incidents/{incident_id}.</li>
+            <li>Built an AI-assisted triage tool that helps support teams prioritize incidents, detect duplicates, and recommend next steps so issues are resolved faster. (<strong>severity prediction</strong>)</li>
+            <li>Applied inference and duplicate-detection logic to rank incidents and reduce manual triage effort (metrics: <strong>3/3</strong> inference field coverage; <strong>100% demo</strong> health/readiness checks).</li>
+            <li>Implemented the prototype with <strong>Python</strong> and <strong>FastAPI</strong>, using <strong>PostgreSQL</strong> and <strong>Redis</strong> for persistence and caching, packaged in <strong>Docker</strong>.</li>
           </ul>
         </div>
 
@@ -196,8 +196,9 @@
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built and deployed a production-ready, multi-version resume site using <span class="b">HTML, CSS, GitHub Pages, and Git</span> with role-targeted ATS keyword alignment.</li>
-            <li>Implemented <span class="b">General, Full-Stack, Python, and A.I.</span> variants with consistent styling and print-to-PDF formatting for faster recruiter-specific customization.</li>
+            <li>Built a multi-version resume site so recruiters can quickly view and download role-specific resumes tailored to different roles. (<strong>recruiter-first UX</strong>)</li>
+            <li>Added print-to-PDF styling and ATS-friendly formatting so each variant is easy to scan and reliably printable.</li>
+            <li>Hosted the site on <strong>GitHub Pages</strong> and managed source with <strong>Git</strong>.</li>
           </ul>
         </div>
 
@@ -207,7 +208,7 @@
             <span class="entry-meta">Scottsdale, AZ | Oct 2019 - May 2020</span>
           </div>
           <ul>
-            <li>Provided hands-on device and software support to keep daily campus operations running smoothly.</li>
+            <li>Provided hands-on device and software support to keep daily campus operations running smoothly. (<strong>end-user support</strong>)</li>
           </ul>
         </div>
       </section>
@@ -221,7 +222,7 @@
         <li>Languages: TypeScript, JavaScript, Python, Java, SQL, HTML, CSS, C++</li>
         <li>Backend & APIs: REST APIs, Node.js, Express.js, Spring Boot, FastAPI, asynchronous processing, webhook integration</li>
         <li>Data: PostgreSQL, SQL query optimization, Redis</li>
-        <li>Cloud & DevOps: Docker, Docker Compose, CI/CD, GitHub Actions, Git, Linux, Cloud deployment (Render), AWS (familiar)</li>
+        <li>Cloud & DevOps: Docker, Docker Compose, CI/CD, GitHub Actions, Git, Linux (Arch Linux, Ubuntu), Cloud deployment (Render), AWS (familiar)</li>
         <li>Frontend: React, Vite, component-based UI integration</li>
         <li>Practices: Integration testing, performance benchmarking (k6, autocannon), observability (Spring Actuator, Prometheus), cross-functional collaboration</li>
         <li>AI/Automation: AI-assisted development workflows (GitHub Copilot, ChatGPT, Claude)</li>
@@ -229,7 +230,7 @@
     </section>
 
     <p class="entry-sub">
-      <strong>Additional Background:</strong> Current full-time occupation is Crisis Therapist. Prior professional roles include Private Investigator, Case Manager, Paraprofessional, and Security Officer.
+      <strong>Additional Background:</strong> Current full-time occupation is Crisis Therapist (3+ years). Prior full-time professional roles include Private Investigator, Case Manager, Paraprofessional, and Security Officer. Additional college degrees obtained include M.S. in Forensice Pyschology, B.S. in Justice Studies, Associates in Arts, and Associates in Science.
     </p>
   </div>
 </body>
