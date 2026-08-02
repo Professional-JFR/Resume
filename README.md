@@ -26,8 +26,17 @@ From the landing page, recruiters can choose:
 5. **Java Software Engineer Resume**
    - `index-java.html`
 
-7. **AI Software Engineer Resume**  
+6. **AI Engineer Resume**  
    - `index-ai.html`
+
+7. **Data Engineer Resume**
+   - `index-data.html`
+
+8. **Embedded Software Engineer Resume**
+   - `index-embedded.html`
+
+9. **C#/.NET Software Engineer Resume**
+   - `index-dotnet.html`
 
 ---
 
@@ -42,7 +51,11 @@ From the landing page, recruiters can choose:
   - General SWE
   - Full-Stack SWE
   - Python SWE
-  - AI SWE
+  - Java SWE
+  - AI Engineer
+  - Data Engineer
+  - Embedded Software Engineer
+  - C#/.NET Software Engineer
 - Kept formatting and styling consistent across versions.
 
 ### 3) Content Optimization for ATS + Recruiters
@@ -94,7 +107,10 @@ From the landing page, recruiters can choose:
 - `index-fullstack.html` → Full-Stack SWE resume
 - `index-python.html` → Python SWE resume
 - `index-java.html` → Java SWE resume
-- `index-ai.html` → AI SWE resume
+- `index-ai.html` → AI Engineer resume
+- `index-data.html` → Data Engineer resume
+- `index-embedded.html` → Embedded Software Engineer resume
+- `index-dotnet.html` → C#/.NET Software Engineer resume
 - `README.md` → Project documentation
 
 ---
