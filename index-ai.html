@@ -68,10 +68,15 @@
 
     <main>
       <section>
+        <h2 class="section-title">Summary</h2>
+        <p class="entry-sub">Production AI engineer who designs, deploys, and operates AI-assisted systems end-to-end — from inference pipeline architecture and structured output engineering to service-level monitoring, model versioning, and stakeholder-facing production rollouts. M.S. Computer Science, GPA 3.98.</p>
+      </section>
+
+      <section>
         <h2 class="section-title">Education</h2>
         <div class="entry-header">
           <span class="entry-title">M.S. in Computer Science | Grand Canyon University - Phoenix, AZ | GPA: 3.98 / 4.00</span>
-          <span class="entry-meta">Graduated</span>
+          <span class="entry-meta">Graduated Oct 2025</span>
         </div>
       </section>
 
@@ -84,33 +89,9 @@
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built and deployed a production-ready Python/FastAPI REST API with PostgreSQL, Redis, and Docker for AI-assisted incident triage workflows.</li>
-            <li>Implemented structured triage inference outputs for severity prediction, duplicate detection, and runbook recommendations.</li>
-            <li>Validated reliable ingest → triage → persist → retrieve flow with 100% demo execution success and clear stakeholder-facing outputs.</li>
-          </ul>
-        </div>
-
-        <div class="exp-item">
-          <div class="entry-header">
-            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/SignalFlow" target="_blank" rel="noopener noreferrer">SignalFlow</a> | ↗ <a href="https://signalflow-ingest.onrender.com" target="_blank" rel="noopener noreferrer">Live Demo</a></span>
-            <span class="entry-meta">2026</span>
-          </div>
-          <ul>
-            <li>Built and deployed a production-ready Spring Boot REST API with PostgreSQL and Docker for ingestion and retrieval reliability.</li>
-            <li>Implemented observability and health checks with Actuator, achieving 100% endpoint pass rate during readiness testing.</li>
-            <li>Resolved deployment/runtime issues across Docker and routing configuration to stabilize production behavior.</li>
-          </ul>
-        </div>
-
-        <div class="exp-item">
-          <div class="entry-header">
-            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/AsyncTaskEngine" target="_blank" rel="noopener noreferrer">Async Task Engine</a></span>
-            <span class="entry-meta">2026</span>
-          </div>
-          <ul>
-            <li>Built and deployed a production-ready backend REST API for asynchronous workflow orchestration with 99.89% request success.</li>
-            <li>Benchmarked latency and throughput with k6/autocannon, achieving 44.81 ms average latency and 90 ms P95 latency.</li>
-            <li>Implemented webhook reliability checks with 92.24% completion delivery success.</li>
+            <li>Designed and deployed a production-grade <span class="b">AI triage service</span> using <span class="b">Python/FastAPI, PostgreSQL, Redis, and Docker</span>; served structured <span class="b">inference outputs</span> achieving <span class="b">3/3 inference field coverage</span> and <span class="b">100% health-check readiness</span> on /health and /ready endpoints.</li>
+            <li>Engineered a rules-based <span class="b">inference pipeline</span> for <span class="b">severity classification, duplicate detection, and runbook recommendation</span>; implemented <span class="b">model versioning support</span> and <span class="b">Redis caching layer</span> to deliver deterministic, low-latency triage responses.</li>
+            <li>Owned end-to-end rollout: defined operational <span class="b">SLOs</span> for triage accuracy and service availability, validated ingest → <span class="b">inference</span> → persist → retrieve flow with <span class="b">100% demo execution success</span>, and built structured <span class="b">JSON outputs</span> for non-technical stakeholders.</li>
           </ul>
         </div>
 
@@ -120,20 +101,31 @@
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built and deployed a full-stack platform with React, Node.js REST APIs, PostgreSQL, and Docker for controlled release workflows.</li>
-            <li>Implemented real-time update and rule evaluation patterns for safer production changes.</li>
-            <li>Validated high-throughput behavior in performance tests up to ~380K-416K requests/min.</li>
+            <li>Built a full-stack <span class="b">feature-flag and controlled-rollout platform</span> using <span class="b">TypeScript/Node.js, React, PostgreSQL, and Docker</span> to gate AI feature releases safely.</li>
+            <li>Implemented <span class="b">rule evaluation, rollback playbooks, optimistic concurrency, and SSE-driven real-time updates</span> to reduce risk during AI model and feature deployments.</li>
+            <li>Validated production-level throughput with <span class="b">CI/CD</span> and load tests, sustaining <span class="b">~380K–416K requests/min</span> (~6.3K–6.9K req/s).</li>
           </ul>
         </div>
 
         <div class="exp-item">
           <div class="entry-header">
-            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/Resume" target="_blank" rel="noopener noreferrer">Resume (Multi-Version, ATS-Targeted)</a> | ↗ <a href="https://professional-jfr.github.io/Resume/" target="_blank" rel="noopener noreferrer">Live Site</a></span>
+            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/SignalFlow" target="_blank" rel="noopener noreferrer">SignalFlow</a> | ↗ <a href="https://signalflow-ingest.onrender.com" target="_blank" rel="noopener noreferrer">Live Demo</a> | ↗ <a href="https://signalflow-ingest.onrender.com/actuator/health" target="_blank" rel="noopener noreferrer">Health Check</a></span>
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built and deployed a production-ready, multi-version resume site with HTML/CSS, Git, and GitHub Pages for AI/Python/full-stack role targeting.</li>
-            <li>Implemented role-specific variants with consistent styling and print-to-PDF formatting to support recruiter-driven optimization.</li>
+            <li>Built and deployed a <span class="b">Java Spring Boot</span> event-ingestion service with <span class="b">observability</span> via Actuator, sustaining <span class="b">~4,000 events/sec</span> with <span class="b">2.8 ms p95 latency</span> and <span class="b">0% request failures</span>.</li>
+            <li>Applied <span class="b">health checks, performance testing (k6)</span>, and deployment debugging to validate production readiness under load.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="entry-header">
+            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/AsyncTaskEngine" target="_blank" rel="noopener noreferrer">Async Task Engine</a></span>
+            <span class="entry-meta">2026</span>
+          </div>
+          <ul>
+            <li>Engineered a <span class="b">Node.js</span> async task-processing API to support <span class="b">batch ML workloads and event-driven workflows</span>, reaching <span class="b">8,827 req/s</span> with <span class="b">44.81 ms average latency</span> and <span class="b">99.89% success rate</span>.</li>
+            <li>Validated <span class="b">webhook delivery reliability</span> at <span class="b">92.24% completion success</span> under sustained load using k6/autocannon.</li>
           </ul>
         </div>
 
@@ -153,11 +145,12 @@
       <h2 class="section-title">Skills</h2>
       <ul class="skills-list">
         <li>Languages: Python, SQL, JavaScript, TypeScript, Java</li>
-        <li>AI Application Engineering: AI-assisted triage workflows, structured inference outputs, recommendation logic, prompt-guided operational workflows</li>
-        <li>Backend & APIs: FastAPI, REST APIs, Node.js, Spring Boot, asynchronous processing</li>
-        <li>Data & State: PostgreSQL, Redis, SQL query optimization</li>
-        <li>Cloud & DevOps: Docker, CI/CD, GitHub Actions, Git, Linux, cloud deployment (Render), AWS (familiar)</li>
-        <li>Communication: Translate technical systems and incident workflows for non-technical stakeholders</li>
+        <li>AI / MLOps: inference serving, model versioning, structured inference outputs, severity classification, duplicate detection, runbook recommendation, operational SLOs, evaluation, monitoring, Redis caching, prompt-guided workflows</li>
+        <li>Backend & APIs: FastAPI, REST APIs, Node.js, Express.js, Spring Boot, asynchronous processing, event-driven architecture, webhook integration</li>
+        <li>Data & State: PostgreSQL, Redis, SQL query optimization, relational schema design</li>
+        <li>Cloud & DevOps: Docker, Docker Compose, CI/CD, GitHub Actions, Git, Linux, cloud deployment (Render), AWS (familiar)</li>
+        <li>Observability: Spring Actuator, health checks, performance benchmarking (k6, autocannon), Prometheus (familiar)</li>
+        <li>Communication: Translate AI inference systems and incident workflows for non-technical stakeholders</li>
       </ul>
     </section>
     <p class="entry-sub"><strong>Additional Background:</strong> Current full-time occupation is Crisis Therapist. Prior roles include Private Investigator, Case Manager, Paraprofessional, and Security Officer.</p>

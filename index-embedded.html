@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Javier Antonio Flores-Rendon - Resume (Backend Python SWE)</title>
+  <title>Javier Antonio Flores-Rendon - Resume (Embedded Software Engineer)</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     :root{ --paper-w: 8.5in; --paper-h: 11in; --page-pad-top: 0.35in; --page-pad-x: 0.35in; --page-pad-bottom: 0.35in; }
@@ -30,6 +30,7 @@
     .skills-list{ list-style:none; margin:0; padding:0; }
     .skills-list li{ margin:0; }
     .entry-sub{ margin:4px 0 0; font-weight:400; }
+    .b{ font-weight:700; }
     a, a:visited{ color:#111; text-decoration:none; font-weight:inherit; }
     a[href^="mailto:"]::before, a[href*="linkedin.com"]::before, a[href*="github.com"]::before{ content:""; }
     @media print{
@@ -69,7 +70,7 @@
     <main>
       <section>
         <h2 class="section-title">Summary</h2>
-        <p class="entry-sub">Python backend engineer building production REST APIs and event-driven systems end-to-end — from FastAPI service design and PostgreSQL data modeling to Docker deployment, observability, and load testing. M.S. Computer Science, GPA 3.98.</p>
+        <p class="entry-sub">Software engineer with M.S. Computer Science (GPA 3.98) and a strong foundation in systems reliability, low-level debugging, Linux deployment, and communication protocol design. Actively building embedded and systems-level projects including C/C++ device communication, serial protocol bridging, and Linux process control. Experienced in hardware/software tradeoff reasoning and cross-functional technical communication.</p>
       </section>
 
       <section>
@@ -85,24 +86,13 @@
 
         <div class="exp-item">
           <div class="entry-header">
-            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/A.I.-Incident-Triage" target="_blank" rel="noopener noreferrer">A.I.-Incident-Triage</a></span>
+            <span class="entry-title">Serial Telemetry Bridge <em style="font-style:normal;">(In Development)</em></span>
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built and deployed a production-grade <span class="b">Python/FastAPI</span> REST API with <span class="b">PostgreSQL, Redis, and Docker</span> for AI-assisted triage workflows, achieving <span class="b">3/3 inference field coverage</span> and <span class="b">100% health-check success</span>.</li>
-            <li>Implemented structured outputs for <span class="b">severity prediction, duplicate detection, and runbook recommendations</span>; integrated <span class="b">Redis caching</span> to reduce inference latency and ensure consistent responses.</li>
-            <li>Validated ingest → triage → persist → retrieve pipeline end-to-end with <span class="b">100% demo execution success</span> and <span class="b">stakeholder-ready JSON outputs</span>.</li>
-          </ul>
-        </div>
-
-        <div class="exp-item">
-          <div class="entry-header">
-            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/AsyncTaskEngine" target="_blank" rel="noopener noreferrer">Async Task Engine</a></span>
-            <span class="entry-meta">2026</span>
-          </div>
-          <ul>
-            <li>Built a production-ready <span class="b">Node.js</span> REST API for <span class="b">asynchronous event-driven workflows</span>, sustaining <span class="b">8,827 req/s</span> with <span class="b">99.89% request success</span> and <span class="b">44.81 ms average latency</span>.</li>
-            <li>Implemented <span class="b">webhook-driven completion flow</span> and reliability checks, achieving <span class="b">92.24% delivery success</span> under sustained load (k6/autocannon).</li>
+            <li>Developing a <span class="b">C/C++ Linux daemon</span> that reads sensor telemetry over a <span class="b">simulated UART serial interface</span>, parses framed byte streams, and forwards structured messages to a local <span class="b">TCP server</span> for aggregation and display.</li>
+            <li>Implementing <span class="b">CRC checksum validation, frame re-sync logic, and error-state recovery</span> to handle real-world communication faults; validating reliability with fault-injection tests under simulated packet corruption and link drops.</li>
+            <li>Using <span class="b">GDB and Valgrind</span> for memory and runtime debugging; designing a modular <span class="b">hardware abstraction layer (HAL)</span> to allow future porting to bare-metal targets without Linux dependencies.</li>
           </ul>
         </div>
 
@@ -112,19 +102,30 @@
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Deployed a <span class="b">Java Spring Boot</span> REST API with <span class="b">PostgreSQL and Docker</span> on cloud infrastructure, sustaining <span class="b">~4,000 events/sec</span> at <span class="b">2.8 ms p95 latency</span> with <span class="b">0% request failures</span>.</li>
-            <li>Implemented <span class="b">Spring Actuator health checks</span> and performance validation; resolved Docker/JDBC runtime issues to ensure stable production operation.</li>
+            <li>Deployed and operated a high-throughput <span class="b">event-ingestion backend</span> on <span class="b">Linux (Docker)</span>, sustaining <span class="b">~4,000 events/sec</span> at <span class="b">2.8 ms p95 latency</span> with <span class="b">0% request failures</span> — demonstrating systems-level reliability under continuous load.</li>
+            <li>Diagnosed and resolved <span class="b">runtime, environment routing, and connection configuration</span> failures through systematic low-level debugging; validated production readiness with <span class="b">health check endpoints and load tests</span>.</li>
           </ul>
         </div>
 
         <div class="exp-item">
           <div class="entry-header">
-            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/ShipSafeFlags" target="_blank" rel="noopener noreferrer">ShipSafeFlags</a></span>
+            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/AsyncTaskEngine" target="_blank" rel="noopener noreferrer">Async Task Engine</a></span>
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built a full-stack <span class="b">feature-flag platform</span> using <span class="b">TypeScript/JavaScript, React, Node.js REST APIs, PostgreSQL, and Docker</span> for controlled feature rollouts.</li>
-            <li>Integrated <span class="b">CI/CD and load tests</span>, sustaining <span class="b">~380K–416K requests/min</span> (~6.3K–6.9K req/s) in production-style throughput validation.</li>
+            <li>Built a <span class="b">Node.js event-driven backend</span> using non-blocking I/O and <span class="b">webhook callbacks</span> — directly analogous to interrupt-driven embedded architectures — reaching <span class="b">8,827 req/s</span> with <span class="b">99.89% success rate</span>.</li>
+            <li>Validated <span class="b">delivery reliability and latency under sustained load</span> using k6/autocannon, achieving <span class="b">44.81 ms average latency</span> and <span class="b">92.24% webhook delivery success</span>.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="entry-header">
+            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/A.I.-Incident-Triage" target="_blank" rel="noopener noreferrer">A.I.-Incident-Triage</a></span>
+            <span class="entry-meta">2026</span>
+          </div>
+          <ul>
+            <li>Built a <span class="b">Python/FastAPI backend</span> with <span class="b">PostgreSQL, Redis, and Docker</span> for AI-assisted event triage — applying structured data transformation, state management, and reliability engineering familiar to embedded data-path design.</li>
+            <li>Validated end-to-end event pipeline (ingest → classify → persist → retrieve) with <span class="b">100% health-check success</span> and <span class="b">3/3 inference field coverage</span>.</li>
           </ul>
         </div>
 
@@ -133,7 +134,7 @@
             <span class="entry-title">IT Intern - Great Hearts Academy</span>
             <span class="entry-meta">Scottsdale, AZ | Oct 2019 - May 2020</span>
           </div>
-          <ul><li>Supported day-to-day campus technology operations through practical hardware/software troubleshooting.</li></ul>
+          <ul><li>Diagnosed and resolved hardware/software issues; explained technical problems and solutions clearly to non-technical staff.</li></ul>
         </div>
       </section>
     </main>
@@ -143,12 +144,12 @@
     <section>
       <h2 class="section-title">Skills</h2>
       <ul class="skills-list">
-        <li>Languages: Python, SQL, JavaScript, TypeScript, Java, HTML, CSS</li>
-        <li>Python Backend: <span class="b">FastAPI</span>, REST APIs, async I/O, event-driven processing, webhook delivery, service-level reliability patterns</li>
-        <li>Data: PostgreSQL, Redis, SQL query optimization, relational schema design</li>
-        <li>Additional Platforms: Node.js, Express.js, Spring Boot</li>
-        <li>Cloud & DevOps: Docker, Docker Compose, CI/CD, GitHub Actions, Git, Linux, cloud deployment (Render), AWS (familiar)</li>
-        <li>Quality & Performance: Integration testing, API validation, load/performance benchmarking (k6, autocannon), observability (Actuator, health checks)</li>
+        <li>Languages: C, C++, Python, SQL, JavaScript, Java (C/C++ primary for embedded targets)</li>
+        <li>Embedded & Systems: UART/serial communication, TCP/IP socket programming, frame parsing, CRC validation, hardware abstraction layer (HAL) design, interrupt-driven patterns, GDB debugging, Valgrind, Linux process management</li>
+        <li>Platforms / OS: Linux (primary), macOS, Windows; Docker-based Linux deployment; bare-metal (in development)</li>
+        <li>Protocols (familiar): UART, TCP/IP, I2C (familiar), SPI (familiar), RTOS concepts</li>
+        <li>Backend & DevOps: Python (FastAPI), Node.js, REST APIs, Docker, CI/CD, GitHub Actions, Git</li>
+        <li>Quality: Systems reliability testing, fault-injection validation, load/performance benchmarking (k6), observability and health check patterns</li>
       </ul>
     </section>
     <p class="entry-sub"><strong>Additional Background:</strong> Current full-time occupation is Crisis Therapist. Prior roles include Private Investigator, Case Manager, Paraprofessional, and Security Officer.</p>

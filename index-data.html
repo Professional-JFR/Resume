@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Javier Antonio Flores-Rendon - Resume (Backend Python SWE)</title>
+  <title>Javier Antonio Flores-Rendon - Resume (Data Engineer)</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     :root{ --paper-w: 8.5in; --paper-h: 11in; --page-pad-top: 0.35in; --page-pad-x: 0.35in; --page-pad-bottom: 0.35in; }
@@ -30,6 +30,7 @@
     .skills-list{ list-style:none; margin:0; padding:0; }
     .skills-list li{ margin:0; }
     .entry-sub{ margin:4px 0 0; font-weight:400; }
+    .b{ font-weight:700; }
     a, a:visited{ color:#111; text-decoration:none; font-weight:inherit; }
     a[href^="mailto:"]::before, a[href*="linkedin.com"]::before, a[href*="github.com"]::before{ content:""; }
     @media print{
@@ -69,7 +70,7 @@
     <main>
       <section>
         <h2 class="section-title">Summary</h2>
-        <p class="entry-sub">Python backend engineer building production REST APIs and event-driven systems end-to-end — from FastAPI service design and PostgreSQL data modeling to Docker deployment, observability, and load testing. M.S. Computer Science, GPA 3.98.</p>
+        <p class="entry-sub">Backend and data engineer with production experience building Python data workflows, event-driven ingestion pipelines, SQL/PostgreSQL data modeling, and ETL processes. M.S. Computer Science, GPA 3.98. Currently expanding into full ETL/ELT orchestration, data quality validation, and cloud data infrastructure.</p>
       </section>
 
       <section>
@@ -85,24 +86,13 @@
 
         <div class="exp-item">
           <div class="entry-header">
-            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/A.I.-Incident-Triage" target="_blank" rel="noopener noreferrer">A.I.-Incident-Triage</a></span>
+            <span class="entry-title">DataStream ETL Pipeline <em style="font-style:normal;">(In Development)</em></span>
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built and deployed a production-grade <span class="b">Python/FastAPI</span> REST API with <span class="b">PostgreSQL, Redis, and Docker</span> for AI-assisted triage workflows, achieving <span class="b">3/3 inference field coverage</span> and <span class="b">100% health-check success</span>.</li>
-            <li>Implemented structured outputs for <span class="b">severity prediction, duplicate detection, and runbook recommendations</span>; integrated <span class="b">Redis caching</span> to reduce inference latency and ensure consistent responses.</li>
-            <li>Validated ingest → triage → persist → retrieve pipeline end-to-end with <span class="b">100% demo execution success</span> and <span class="b">stakeholder-ready JSON outputs</span>.</li>
-          </ul>
-        </div>
-
-        <div class="exp-item">
-          <div class="entry-header">
-            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/AsyncTaskEngine" target="_blank" rel="noopener noreferrer">Async Task Engine</a></span>
-            <span class="entry-meta">2026</span>
-          </div>
-          <ul>
-            <li>Built a production-ready <span class="b">Node.js</span> REST API for <span class="b">asynchronous event-driven workflows</span>, sustaining <span class="b">8,827 req/s</span> with <span class="b">99.89% request success</span> and <span class="b">44.81 ms average latency</span>.</li>
-            <li>Implemented <span class="b">webhook-driven completion flow</span> and reliability checks, achieving <span class="b">92.24% delivery success</span> under sustained load (k6/autocannon).</li>
+            <li>Building a production-grade <span class="b">Python ETL pipeline</span> that ingests records from REST APIs and CSV/JSON sources, transforms data with <span class="b">pandas and SQLAlchemy</span>, and persists normalized records to <span class="b">PostgreSQL</span> with schema validation and idempotent upsert logic.</li>
+            <li>Implementing <span class="b">pipeline orchestration</span> via scheduled jobs, <span class="b">data quality checks</span> (null rates, schema drift detection, row-count assertions), and structured logging for operational visibility.</li>
+            <li>Designing <span class="b">cloud storage integration</span> (AWS S3 / GCS) for raw data archival and adding <span class="b">Airflow</span>-style DAG scheduling for multi-step transformation workflows.</li>
           </ul>
         </div>
 
@@ -112,19 +102,30 @@
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Deployed a <span class="b">Java Spring Boot</span> REST API with <span class="b">PostgreSQL and Docker</span> on cloud infrastructure, sustaining <span class="b">~4,000 events/sec</span> at <span class="b">2.8 ms p95 latency</span> with <span class="b">0% request failures</span>.</li>
-            <li>Implemented <span class="b">Spring Actuator health checks</span> and performance validation; resolved Docker/JDBC runtime issues to ensure stable production operation.</li>
+            <li>Built a <span class="b">high-throughput event-ingestion service</span> using <span class="b">Java Spring Boot, PostgreSQL, and Docker</span>, sustaining <span class="b">~4,000 events/sec</span> with <span class="b">2.8 ms p95 latency</span> and <span class="b">0% request failures</span> — demonstrating production-grade data ingestion reliability.</li>
+            <li>Applied <span class="b">SQL schema design</span>, observability via Spring Actuator, and systematic runtime debugging to ensure stable data persistence under load.</li>
           </ul>
         </div>
 
         <div class="exp-item">
           <div class="entry-header">
-            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/ShipSafeFlags" target="_blank" rel="noopener noreferrer">ShipSafeFlags</a></span>
+            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/A.I.-Incident-Triage" target="_blank" rel="noopener noreferrer">A.I.-Incident-Triage</a></span>
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built a full-stack <span class="b">feature-flag platform</span> using <span class="b">TypeScript/JavaScript, React, Node.js REST APIs, PostgreSQL, and Docker</span> for controlled feature rollouts.</li>
-            <li>Integrated <span class="b">CI/CD and load tests</span>, sustaining <span class="b">~380K–416K requests/min</span> (~6.3K–6.9K req/s) in production-style throughput validation.</li>
+            <li>Designed a <span class="b">Python/FastAPI data pipeline</span> that ingests incident events, applies structured <span class="b">classification logic (severity, duplicate detection, runbook mapping)</span>, and persists enriched records to <span class="b">PostgreSQL</span> via a normalized data model.</li>
+            <li>Used <span class="b">Redis</span> as an intermediate caching layer for in-flight data, achieving <span class="b">100% end-to-end data flow success</span> from ingest through retrieval.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="entry-header">
+            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/AsyncTaskEngine" target="_blank" rel="noopener noreferrer">Async Task Engine</a></span>
+            <span class="entry-meta">2026</span>
+          </div>
+          <ul>
+            <li>Built an <span class="b">event-driven processing backend</span> using <span class="b">Node.js REST APIs</span> for non-blocking task execution, sustaining <span class="b">8,827 req/s</span> with <span class="b">99.89% success rate</span> — applicable to batch data job coordination and async ETL workloads.</li>
+            <li>Implemented <span class="b">webhook delivery</span> and reliability validation using k6/autocannon, achieving <span class="b">92.24% event delivery success</span>.</li>
           </ul>
         </div>
 
@@ -133,7 +134,7 @@
             <span class="entry-title">IT Intern - Great Hearts Academy</span>
             <span class="entry-meta">Scottsdale, AZ | Oct 2019 - May 2020</span>
           </div>
-          <ul><li>Supported day-to-day campus technology operations through practical hardware/software troubleshooting.</li></ul>
+          <ul><li>Supported daily campus technology operations through practical hardware/software troubleshooting.</li></ul>
         </div>
       </section>
     </main>
@@ -144,11 +145,11 @@
       <h2 class="section-title">Skills</h2>
       <ul class="skills-list">
         <li>Languages: Python, SQL, JavaScript, TypeScript, Java, HTML, CSS</li>
-        <li>Python Backend: <span class="b">FastAPI</span>, REST APIs, async I/O, event-driven processing, webhook delivery, service-level reliability patterns</li>
-        <li>Data: PostgreSQL, Redis, SQL query optimization, relational schema design</li>
-        <li>Additional Platforms: Node.js, Express.js, Spring Boot</li>
-        <li>Cloud & DevOps: Docker, Docker Compose, CI/CD, GitHub Actions, Git, Linux, cloud deployment (Render), AWS (familiar)</li>
-        <li>Quality & Performance: Integration testing, API validation, load/performance benchmarking (k6, autocannon), observability (Actuator, health checks)</li>
+        <li>Data Engineering: ETL/ELT pipeline design, pandas, SQLAlchemy, data ingestion, data quality validation, schema design, idempotent upserts, pipeline orchestration (Airflow — in progress)</li>
+        <li>Databases: PostgreSQL, Redis, SQL query optimization, relational data modeling, indexing strategies</li>
+        <li>Cloud & Storage: AWS S3 (familiar), GCS (familiar), Docker, Docker Compose, cloud deployment (Render)</li>
+        <li>Backend & APIs: FastAPI, REST APIs, Node.js, Express.js, Spring Boot, asynchronous/event-driven processing</li>
+        <li>DevOps & Quality: CI/CD, GitHub Actions, Git, Linux, load testing (k6, autocannon), observability (Actuator, health checks), structured logging</li>
       </ul>
     </section>
     <p class="entry-sub"><strong>Additional Background:</strong> Current full-time occupation is Crisis Therapist. Prior roles include Private Investigator, Case Manager, Paraprofessional, and Security Officer.</p>
