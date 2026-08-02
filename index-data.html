@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Javier Antonio Flores-Rendon - Resume (AI SWE)</title>
+  <title>Javier Antonio Flores-Rendon - Resume (Data Engineer)</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     :root{ --paper-w: 8.5in; --paper-h: 11in; --page-pad-top: 0.35in; --page-pad-x: 0.35in; --page-pad-bottom: 0.35in; }
@@ -68,6 +68,11 @@
 
     <main>
       <section>
+        <h2 class="section-title">Summary</h2>
+        <p class="entry-sub">Data engineer with production experience building Python data workflows, event-driven ingestion pipelines, SQL/PostgreSQL data modeling, and ETL processes. M.S. Computer Science, GPA 3.98. Expanding into full ETL/ELT orchestration, data quality validation, and cloud data infrastructure.</p>
+      </section>
+
+      <section>
         <h2 class="section-title">Education</h2>
         <div class="entry-header">
           <span class="entry-title">M.S. in Computer Science | Grand Canyon University - Phoenix, AZ | GPA: 3.98 / 4.00</span>
@@ -80,13 +85,13 @@
 
         <div class="exp-item">
           <div class="entry-header">
-            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/A.I.-Incident-Triage" target="_blank" rel="noopener noreferrer">A.I.-Incident-Triage</a></span>
+            <span class="entry-title">DataStream ETL Pipeline <em style="font-style:normal;">(In Development)</em></span>
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built a FastAPI backend for AI-assisted incident triage that scored severity, flagged duplicates, and surfaced runbook recommendations automatically.</li>
-            <li>Stored triage outputs in PostgreSQL and added Redis caching so repeated lookups stayed fast without re-running inference.</li>
-            <li>Validated the full ingest-to-response pipeline end-to-end with 100% demo execution success and clear stakeholder-facing outputs.</li>
+            <li>Python ETL pipeline that ingests from REST APIs and CSV/JSON sources, transforms with pandas and SQLAlchemy, and stores normalized records in PostgreSQL.</li>
+            <li>Added schema validation, idempotent upsert logic, and scheduled orchestration so data loads stay consistent across repeated runs.</li>
+            <li>Building Airflow-style DAG scheduling and data quality checks (null rates, schema drift detection, row-count assertions) for multi-step workflows.</li>
           </ul>
         </div>
 
@@ -96,9 +101,19 @@
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built a Spring Boot REST API for log ingestion and retrieval, backed by PostgreSQL and containerized with Docker for cloud deployment.</li>
-            <li>Added Spring Actuator health checks and observability so the service passed 100% of readiness checks before going live.</li>
-            <li>Debugged Docker and routing config issues to bring the service to a stable, production-ready state.</li>
+            <li>Spring Boot event-ingestion service backed by PostgreSQL and Docker, sustaining ~4,000 events/sec at 2.8 ms P95 latency with 0% request failures.</li>
+            <li>Applied SQL schema design and Spring Actuator observability to confirm stable data persistence under load.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="entry-header">
+            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/A.I.-Incident-Triage" target="_blank" rel="noopener noreferrer">A.I.-Incident-Triage</a></span>
+            <span class="entry-meta">2026</span>
+          </div>
+          <ul>
+            <li>FastAPI data pipeline that classifies incident events (severity, duplicates, runbooks) and persists enriched records to PostgreSQL via a normalized data model.</li>
+            <li>Used Redis as a caching layer so repeated lookups skipped re-computation; achieved 100% end-to-end data flow success from ingest through retrieval.</li>
           </ul>
         </div>
 
@@ -108,32 +123,8 @@
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built a REST API for async background task processing that accepted jobs, tracked their status, and completed them reliably (99.89% request success).</li>
-            <li>Load tested with k6 and autocannon to confirm 44.81 ms average latency and 90 ms P95 under real traffic.</li>
-            <li>Added webhook delivery so callers were notified when jobs finished (92.24% delivery success).</li>
-          </ul>
-        </div>
-
-        <div class="exp-item">
-          <div class="entry-header">
-            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/ShipSafeFlags" target="_blank" rel="noopener noreferrer">ShipSafeFlags</a></span>
-            <span class="entry-meta">2026</span>
-          </div>
-          <ul>
-            <li>Built a feature flag platform with a React frontend and Node.js REST API so teams could gate and roll back features without redeploying.</li>
-            <li>Added real-time SSE updates and rule-based evaluation so flag changes took effect instantly and were easy to monitor.</li>
-            <li>Stress tested the API and sustained ~380K–416K requests/min, confirming production-scale throughput.</li>
-          </ul>
-        </div>
-
-        <div class="exp-item">
-          <div class="entry-header">
-            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/Resume" target="_blank" rel="noopener noreferrer">Resume (Multi-Version, ATS-Targeted)</a> | ↗ <a href="https://professional-jfr.github.io/Resume/" target="_blank" rel="noopener noreferrer">Live Site</a></span>
-            <span class="entry-meta">2026</span>
-          </div>
-          <ul>
-            <li>Built and deployed a production-ready, multi-version resume site with HTML/CSS, Git, and GitHub Pages for AI/Python/full-stack role targeting.</li>
-            <li>Implemented role-specific variants with consistent styling and print-to-PDF formatting to support recruiter-driven optimization.</li>
+            <li>Node.js event-driven backend for non-blocking task coordination, sustaining 8,827 req/s at 99.89% success rate — applicable to async ETL and batch data workloads.</li>
+            <li>Implemented webhook delivery and validated event reliability with k6/autocannon, achieving 92.24% delivery success.</li>
           </ul>
         </div>
 
@@ -142,7 +133,7 @@
             <span class="entry-title">IT Intern - Great Hearts Academy</span>
             <span class="entry-meta">Scottsdale, AZ | Oct 2019 - May 2020</span>
           </div>
-          <ul><li>Delivered practical technology support for day-to-day school operations and staff workflows.</li></ul>
+          <ul><li>Supported daily campus technology operations through practical hardware/software troubleshooting.</li></ul>
         </div>
       </section>
     </main>
@@ -152,12 +143,12 @@
     <section>
       <h2 class="section-title">Skills</h2>
       <ul class="skills-list">
-        <li>Languages: Python, SQL, JavaScript, TypeScript, Java</li>
-        <li>AI Application Engineering: AI-assisted triage workflows, structured inference outputs, recommendation logic, prompt-guided operational workflows</li>
-        <li>Backend & APIs: FastAPI, REST APIs, Node.js, Spring Boot, asynchronous processing</li>
-        <li>Data & State: PostgreSQL, Redis, SQL query optimization</li>
-        <li>Cloud & DevOps: Docker, CI/CD, GitHub Actions, Git, Linux, cloud deployment (Render), AWS (familiar)</li>
-        <li>Communication: Translate technical systems and incident workflows for non-technical stakeholders</li>
+        <li>Languages: Python, SQL, JavaScript, TypeScript, Java, HTML, CSS</li>
+        <li>Data Engineering: ETL/ELT pipeline design, pandas, SQLAlchemy, data ingestion, data quality validation, schema design, idempotent upserts, pipeline orchestration (Airflow — in progress)</li>
+        <li>Databases: PostgreSQL, Redis, SQL query optimization, relational data modeling, indexing strategies</li>
+        <li>Cloud &amp; Storage: AWS S3 (familiar), GCS (familiar), Docker, Docker Compose, cloud deployment (Render)</li>
+        <li>Backend &amp; APIs: FastAPI, REST APIs, Node.js, Spring Boot, asynchronous/event-driven processing</li>
+        <li>DevOps &amp; Quality: CI/CD, GitHub Actions, Git, Linux, load testing (k6, autocannon), observability (health checks, structured logging)</li>
       </ul>
     </section>
     <p class="entry-sub"><strong>Additional Background:</strong> Current full-time occupation is Crisis Therapist. Prior roles include Private Investigator, Case Manager, Paraprofessional, and Security Officer.</p>
