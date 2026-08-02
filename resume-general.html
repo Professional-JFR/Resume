@@ -144,13 +144,13 @@
 
         <div class="exp-item">
           <div class="entry-header">
-            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/SignalFlow" target="_blank" rel="noopener noreferrer">SignalFlow</a> | ↗ <a href="https://signalflow-ingest.onrender.com" target="_blank" rel="noopener noreferrer">Live Demo</a> |  ↗ <a href="https://signalflow-ingest.onrender.com/actuator/health" target="_blank">Health Check</a></span>
+            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/SignalFlow" target="_blank" rel="noopener noreferrer">SignalFlow</a> | ↗ <a href="https://signalflow-ingest.onrender.com" target="_blank" rel="noopener noreferrer">Live Demo</a> | ↗ <a href="https://signalflow-ingest.onrender.com/actuator/health" target="_blank">Health Check</a></span>
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built a backend service that gives product and operations teams real-time health and metrics so they can find and fix problems faster. (<strong>Observability</strong> (<strong>Actuator</strong>), <strong>Health Checks</strong>)</li>
-            <li>Implemented the service using <strong>Java</strong> and <strong>Spring Boot</strong>, backed by <strong>PostgreSQL</strong> and deployed in <strong>Docker</strong> containers.</li>
-            <li>Added health endpoints and monitoring to validate production readiness and speed incident detection. (Metric: ~4.0K events/sec: 2.8 ms p95 latency with 0% request failures during k6 tests)</li>
+            <li>Spring Boot service: Built log-ingestion and retrieval APIs with PostgreSQL and Docker for production-style deployment.</li>
+            <li>Observability: Added Actuator health checks and monitoring so issues were easier to detect and resolve.</li>
+            <li>Performance result: Reached ~4.0K events/sec at 2.8 ms P95 with 0% request failures during k6 tests.</li>
           </ul>
         </div>
 
@@ -160,9 +160,9 @@
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Delivered a background task engine that keeps the user-facing app responsive by running long jobs outside the request flow. (<strong>Asynchronous Processing</strong>)</li>
-            <li>Built with <strong>Node.js</strong> and <strong>JavaScript</strong>, exposing <strong>REST APIs</strong> and using <strong>webhooks</strong> for reliable completion flows.</li>
-            <li>Used background workers and load testing to ensure tasks complete reliably and the UI stays responsive (Metrics: 44.81 ms avg latency (84 ms p99); 92.24% delivery success).</li>
+            <li>Asynchronous processing: Built a background task engine that keeps user-facing APIs responsive during long-running jobs.</li>
+            <li>REST APIs + webhooks: Implemented job intake, status tracking, and callback flows for reliable completion handling.</li>
+            <li>Latency result: Measured 44.81 ms average latency (84 ms P99) and 92.24% webhook delivery success.</li>
           </ul>
         </div>
 
@@ -172,9 +172,9 @@
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built a feature-flag platform so product teams can safely roll out or rollback features to selected user groups and reduce release risk. (Feature Flags)</li>
-            <li>Implemented the platform with <strong>TypeScript</strong>, <strong>Node.js</strong>, <strong>React</strong>, and <strong>SQL</strong> (<strong>PostgreSQL</strong>), adding caching, rule evaluation, and <strong>SSE</strong> for real-time updates.</li>
-            <li>Validated rollout safety and capacity using <strong>CI/CD</strong> and performance tests to minimize customer impact (Metrics: sustained ~380K–416K requests/min in tests).</li>
+            <li>Feature flags: Built a rollout platform so teams could safely gate and roll back features without redeploying.</li>
+            <li>Real-time delivery: Implemented TypeScript/Node.js/React with PostgreSQL, caching, rule evaluation, and SSE updates.</li>
+            <li>Throughput result: Sustained ~380K–416K requests/min in load tests.</li>
           </ul>
         </div>
 
@@ -184,9 +184,9 @@
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built an AI-assisted triage tool that helps support teams prioritize incidents, detect duplicates, and recommend next steps so issues are resolved faster. (Severity Prediction)</li>
-            <li>Implemented the prototype with <strong>Python</strong> and <strong>FastAPI</strong>, using <strong>SQL</strong> (<strong>PostgreSQL</strong>) and <strong>Redis</strong> for persistence and caching, packaged in <strong>Docker</strong>.</li>
-            <li>Applied inference and duplicate-detection logic to rank incidents and reduce manual triage effort (Metrics: 3/3 inference field coverage; 100% demo health/readiness checks).</li>
+            <li>FastAPI triage service: Built AI-assisted incident triage for severity prediction, duplicate detection, and runbook recommendations.</li>
+            <li>Data reliability: Stored outputs in PostgreSQL and Redis to support repeat lookups and operational workflows.</li>
+            <li>Execution result: Validated 3/3 inference fields with 100% demo health/readiness checks.</li>
           </ul>
         </div>
 
@@ -196,8 +196,8 @@
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built and deployed a production-ready, multi-version resume site using <strong>HTML</strong>, <strong>CSS</strong>, <strong>GitHub</strong> Pages, and <strong>Git</strong> with role-targeted ATS keyword alignment.</li>
-            <li>Implemented <strong>General Full-Stack</strong>, <strong>Python</strong>, and <strong>A.I.</strong> variants with consistent styling and print-to-PDF formatting for faster recruiter-specific customization.</li>
+            <li>Resume platform: Built and deployed a multi-version resume site with HTML/CSS, Git, and GitHub Pages.</li>
+            <li>Variant coverage: Delivered General, Full-Stack, Python, Java, AI, FAANG, Data, Embedded, and .NET versions with consistent formatting.</li>
           </ul>
         </div>
 
@@ -207,7 +207,7 @@
             <span class="entry-meta">Scottsdale, AZ | Oct 2019 - May 2020</span>
           </div>
           <ul>
-            <li>Provided hands-on device and software support to keep daily campus operations running smoothly. (<strong>End-User Support</strong>)</li>
+            <li>End-user support: Provided hands-on device and software troubleshooting to keep campus operations running smoothly.</li>
           </ul>
         </div>
       </section>
@@ -220,17 +220,15 @@
       <ul class="skills-list">
         <li><strong>Languages:</strong> TypeScript, JavaScript, Python, Java, SQL, HTML, CSS, C++</li>
         <li><strong>Backend & APIs:</strong> REST APIs, Node.js, Express.js, Spring Boot, FastAPI, asynchronous processing, webhook integration</li>
-        <li><strong>AI / MLOps:</strong> inference serving, model versioning, model evaluation, severity prediction, duplicate detection, model drift monitoring</li>
-        <li><strong>Data & Storage:</strong> PostgreSQL, Redis, SQL query optimization</li>
+        <li><strong>Data & Storage:</strong> PostgreSQL, Redis, SQL query optimization, relational schema design</li>
         <li><strong>Cloud & DevOps:</strong> Docker, Docker Compose, CI/CD, GitHub Actions, Git, Linux, cloud deployment (Render), AWS (familiar)</li>
         <li><strong>Frontend & Real-time:</strong> React, Vite, SSE (server-sent events)</li>
-        <li><strong>Platforms:</strong> iOS, Android, macOS, Windows</li>
-        <li><strong>Tools & Testing:</strong> k6, autocannon, integration testing, observability (Actuator, Prometheus)</li>
+        <li><strong>Quality & Observability:</strong> k6, autocannon, integration testing, health checks, production troubleshooting</li>
       </ul>
     </section>
 
     <p class="entry-sub">
-      <strong>Additional Background:</strong> Current full-time occupation is Crisis Therapist (3+ years). Prior full-time professional roles include Private Investigator, Case Manager, Paraprofessional, and Security Officer. Additional college degrees obtained include M.S. in Forensice Pyschology, B.S. in Justice Studies, Associates in Arts, and Associates in Science.
+      <strong>Additional Background:</strong> Current full-time occupation is Crisis Therapist (3+ years). Prior full-time professional roles include Private Investigator, Case Manager, Paraprofessional, and Security Officer. Additional college degrees obtained include M.S. in Forensic Psychology, B.S. in Justice Studies, Associates in Arts, and Associates in Science.
     </p>
   </div>
 </body>
