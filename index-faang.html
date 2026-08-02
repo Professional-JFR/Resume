@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Javier Antonio Flores-Rendon - Resume (AI SWE)</title>
+  <title>Javier Antonio Flores-Rendon - Resume (FAANG / Top-Tier SWE)</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     :root{ --paper-w: 8.5in; --paper-h: 11in; --page-pad-top: 0.35in; --page-pad-x: 0.35in; --page-pad-bottom: 0.35in; }
@@ -84,21 +84,9 @@
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built a FastAPI backend for AI-assisted incident triage that scored severity, flagged duplicates, and surfaced runbook recommendations automatically.</li>
-            <li>Stored triage outputs in PostgreSQL and added Redis caching so repeated lookups stayed fast without re-running inference.</li>
-            <li>Validated the full ingest-to-response pipeline end-to-end with 100% demo execution success and clear stakeholder-facing outputs.</li>
-          </ul>
-        </div>
-
-        <div class="exp-item">
-          <div class="entry-header">
-            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/SignalFlow" target="_blank" rel="noopener noreferrer">SignalFlow</a> | ↗ <a href="https://signalflow-ingest.onrender.com" target="_blank" rel="noopener noreferrer">Live Demo</a></span>
-            <span class="entry-meta">2026</span>
-          </div>
-          <ul>
-            <li>Built a Spring Boot REST API for log ingestion and retrieval, backed by PostgreSQL and containerized with Docker for cloud deployment.</li>
-            <li>Added Spring Actuator health checks and observability so the service passed 100% of readiness checks before going live.</li>
-            <li>Debugged Docker and routing config issues to bring the service to a stable, production-ready state.</li>
+            <li>Built a FastAPI service for AI-driven incident triage that ranked severity, flagged duplicates, and surfaced runbooks automatically.</li>
+            <li>Connected PostgreSQL for result persistence and Redis for caching so triage responses stayed fast under repeated load.</li>
+            <li>Owned the full pipeline end-to-end — ingest, inference, persist, retrieve — and validated it with 100% demo execution success.</li>
           </ul>
         </div>
 
@@ -108,9 +96,21 @@
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built a REST API for async background task processing that accepted jobs, tracked their status, and completed them reliably (99.89% request success).</li>
-            <li>Load tested with k6 and autocannon to confirm 44.81 ms average latency and 90 ms P95 under real traffic.</li>
-            <li>Added webhook delivery so callers were notified when jobs finished (92.24% delivery success).</li>
+            <li>Built a backend API for async task orchestration that accepted jobs, tracked their status, and delivered completion webhooks reliably.</li>
+            <li>Load tested with k6 and autocannon to confirm 44.81 ms average latency, 90 ms P95, and 99.89% request success under concurrent load.</li>
+            <li>Tuned webhook delivery to 92.24% success and documented reliability behavior for production review.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="entry-header">
+            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/SignalFlow" target="_blank" rel="noopener noreferrer">SignalFlow</a> | ↗ <a href="https://signalflow-ingest.onrender.com" target="_blank" rel="noopener noreferrer">Live Demo</a></span>
+            <span class="entry-meta">2026</span>
+          </div>
+          <ul>
+            <li>Built a Spring Boot REST API for log ingestion and retrieval, deployed to the cloud with Docker and PostgreSQL as the backing store.</li>
+            <li>Added Spring Actuator observability and health checks so the service was production-ready and passed 100% of readiness checks.</li>
+            <li>Debugged Docker, JDBC, and routing issues independently until the service reached a fully stable, operational state.</li>
           </ul>
         </div>
 
@@ -120,20 +120,9 @@
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built a feature flag platform with a React frontend and Node.js REST API so teams could gate and roll back features without redeploying.</li>
-            <li>Added real-time SSE updates and rule-based evaluation so flag changes took effect instantly and were easy to monitor.</li>
-            <li>Stress tested the API and sustained ~380K–416K requests/min, confirming production-scale throughput.</li>
-          </ul>
-        </div>
-
-        <div class="exp-item">
-          <div class="entry-header">
-            <span class="entry-title">↗ <a href="https://github.com/Professional-JFR/Resume" target="_blank" rel="noopener noreferrer">Resume (Multi-Version, ATS-Targeted)</a> | ↗ <a href="https://professional-jfr.github.io/Resume/" target="_blank" rel="noopener noreferrer">Live Site</a></span>
-            <span class="entry-meta">2026</span>
-          </div>
-          <ul>
-            <li>Built and deployed a production-ready, multi-version resume site with HTML/CSS, Git, and GitHub Pages for AI/Python/full-stack role targeting.</li>
-            <li>Implemented role-specific variants with consistent styling and print-to-PDF formatting to support recruiter-driven optimization.</li>
+            <li>Built a feature flag system with a React UI and Node.js REST API so teams could gate and roll back features without redeploying.</li>
+            <li>Implemented caching, rule evaluation, optimistic concurrency, and real-time SSE updates for safe, observable rollouts.</li>
+            <li>Set up CI/CD and stress tested throughput, sustaining ~380K–416K requests/min to confirm production-scale readiness.</li>
           </ul>
         </div>
 
@@ -142,7 +131,7 @@
             <span class="entry-title">IT Intern - Great Hearts Academy</span>
             <span class="entry-meta">Scottsdale, AZ | Oct 2019 - May 2020</span>
           </div>
-          <ul><li>Delivered practical technology support for day-to-day school operations and staff workflows.</li></ul>
+          <ul><li>Supported day-to-day campus technology operations through practical hardware and software troubleshooting.</li></ul>
         </div>
       </section>
     </main>
@@ -152,12 +141,11 @@
     <section>
       <h2 class="section-title">Skills</h2>
       <ul class="skills-list">
-        <li>Languages: Python, SQL, JavaScript, TypeScript, Java</li>
-        <li>AI Application Engineering: AI-assisted triage workflows, structured inference outputs, recommendation logic, prompt-guided operational workflows</li>
-        <li>Backend & APIs: FastAPI, REST APIs, Node.js, Spring Boot, asynchronous processing</li>
-        <li>Data & State: PostgreSQL, Redis, SQL query optimization</li>
-        <li>Cloud & DevOps: Docker, CI/CD, GitHub Actions, Git, Linux, cloud deployment (Render), AWS (familiar)</li>
-        <li>Communication: Translate technical systems and incident workflows for non-technical stakeholders</li>
+        <li>Languages: Python, Java, JavaScript, TypeScript, SQL, HTML, CSS, C++</li>
+        <li>Backend: FastAPI, Spring Boot, Node.js, REST APIs, async processing, webhook/event-driven patterns</li>
+        <li>Data: PostgreSQL, Redis, SQL query optimization, relational schema design</li>
+        <li>Cloud &amp; DevOps: Docker, Docker Compose, CI/CD, GitHub Actions, Git, Linux, cloud deployment (Render), AWS (familiar)</li>
+        <li>Observability &amp; Reliability: Spring Actuator, health checks, load testing (k6, autocannon), latency/throughput benchmarking, deployment troubleshooting</li>
       </ul>
     </section>
     <p class="entry-sub"><strong>Additional Background:</strong> Current full-time occupation is Crisis Therapist. Prior roles include Private Investigator, Case Manager, Paraprofessional, and Security Officer.</p>

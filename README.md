@@ -11,23 +11,35 @@ This repository hosts multiple tailored resume versions for different Software E
 
 From the landing page, recruiters can choose:
 
-1. **Original Resume**  
+1. **Original Resume**
    - `O.G_index.html`
 
-2. **General Software Engineering Resume**  
+2. **General Software Engineering Resume**
    - `resume-general.html`
 
-3. **Full-Stack Software Engineer Resume**  
+3. **FAANG / Top-Tier SWE Resume**
+   - `index-faang.html`
+
+4. **Full-Stack Software Engineer Resume**
    - `index-fullstack.html`
 
-4. **Python Software Engineer Resume**  
+5. **Backend Python Software Engineer Resume**
    - `index-python.html`
-  
-5. **Java Software Engineer Resume**
+
+6. **Backend Java Software Engineer Resume**
    - `index-java.html`
 
-7. **AI Software Engineer Resume**  
+7. **AI Software Engineer Resume**
    - `index-ai.html`
+
+8. **Data Engineer Resume**
+   - `index-data.html`
+
+9. **Embedded Software Engineer Resume**
+   - `index-embedded.html`
+
+10. **C# / .NET Software Engineer Resume**
+    - `index-dotnet.html`
 
 ---
 
@@ -38,14 +50,16 @@ From the landing page, recruiters can choose:
 - Preserved a clean UI for fast recruiter navigation.
 
 ### 2) Role-Targeted Resume Variants
-- Built separate HTML resume versions for:
-  - General SWE
-  - Full-Stack SWE
-  - Python SWE
-  - AI SWE
-- Kept formatting and styling consistent across versions.
+- Built separate HTML resume versions for ten distinct engineering roles.
+- Kept formatting and styling consistent across all versions.
+- Each variant leads with the most relevant keywords and stack for that role.
 
-### 3) Content Optimization for ATS + Recruiters
+### 3) Recruiter-Friendly Bullet Style
+- Bullets follow a keyword-first formula: system/technology → plain-English explanation → metric or result.
+- Short, scannable sentences so a recruiter can identify role fit in a few seconds.
+- Metrics preserved where available (latency, throughput, success rates).
+
+### 4) Content Optimization for ATS + Recruiters
 - Added role-relevant keywords in skills and experience bullets.
 - Maintained truth-based wording aligned to completed projects.
 - Emphasized production signals:
@@ -57,21 +71,10 @@ From the landing page, recruiters can choose:
   - CI/CD
   - cloud deployment
 
-### 4) Experience Section Improvements
-- Added the **Resume project** as a formal project entry:
-  - GitHub repo link
-  - live site link
-  - outcome-focused bullets
-- Kept **IT Intern** experience included (shortened to a concise single bullet as requested).
-- Standardized project bullet strategy:
-  - 3 bullets for core technical projects
-  - 2 bullets for Resume project
-  - 1 bullet for IT Intern
-
 ### 5) Print/PDF Layout Tuning
 - Updated print CSS for better two-page fit while preserving readability.
 - Maintained:
-  - page 1 focus on education + relevant experience
+  - page 1 focus on summary + education + relevant experience
   - page 2 focus on skills + additional background
 - Added tighter print spacing and font sizing to reduce overflow risk.
 
@@ -91,10 +94,14 @@ From the landing page, recruiters can choose:
 - `index.html` → Resume selection landing page
 - `O.G_index.html` → Original baseline resume
 - `resume-general.html` → General SWE resume
+- `index-faang.html` → FAANG / Top-Tier SWE resume
 - `index-fullstack.html` → Full-Stack SWE resume
-- `index-python.html` → Python SWE resume
-- `index-java.html` → Java SWE resume
-- `index-ai.html` → AI SWE resume
+- `index-python.html` → Backend Python SWE resume
+- `index-java.html` → Backend Java SWE resume
+- `index-ai.html` → AI Software Engineer resume
+- `index-data.html` → Data Engineer resume
+- `index-embedded.html` → Embedded Software Engineer resume
+- `index-dotnet.html` → C# / .NET Software Engineer resume
 - `README.md` → Project documentation
 
 ---
@@ -108,6 +115,6 @@ From the landing page, recruiters can choose:
 
 ## Maintainer
 
-**URL Links**  
-- GitHub: `https://github.com/Professional-JFR`  
+**URL Links**
+- GitHub: `https://github.com/Professional-JFR`
 - LinkedIn: `https://www.linkedin.com/in/javier-flores-rendon-437a43194/`
