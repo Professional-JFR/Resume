@@ -84,9 +84,9 @@
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built and deployed a production-ready Python/FastAPI REST API with PostgreSQL, Redis, and Docker for AI-assisted incident triage workflows.</li>
-            <li>Implemented structured triage inference outputs for severity prediction, duplicate detection, and runbook recommendations.</li>
-            <li>Validated reliable ingest → triage → persist → retrieve flow with 100% demo execution success and clear stakeholder-facing outputs.</li>
+            <li>Built a FastAPI backend for AI-assisted incident triage that scored severity, flagged duplicates, and surfaced runbook recommendations automatically.</li>
+            <li>Stored triage outputs in PostgreSQL and added Redis caching so repeated lookups stayed fast without re-running inference.</li>
+            <li>Validated the full ingest-to-response pipeline end-to-end with 100% demo execution success and clear stakeholder-facing outputs.</li>
           </ul>
         </div>
 
@@ -96,9 +96,9 @@
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built and deployed a production-ready Spring Boot REST API with PostgreSQL and Docker for ingestion and retrieval reliability.</li>
-            <li>Implemented observability and health checks with Actuator, achieving 100% endpoint pass rate during readiness testing.</li>
-            <li>Resolved deployment/runtime issues across Docker and routing configuration to stabilize production behavior.</li>
+            <li>Built a Spring Boot REST API for log ingestion and retrieval, backed by PostgreSQL and containerized with Docker for cloud deployment.</li>
+            <li>Added Spring Actuator health checks and observability so the service passed 100% of readiness checks before going live.</li>
+            <li>Debugged Docker and routing config issues to bring the service to a stable, production-ready state.</li>
           </ul>
         </div>
 
@@ -108,9 +108,9 @@
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built and deployed a production-ready backend REST API for asynchronous workflow orchestration with 99.89% request success.</li>
-            <li>Benchmarked latency and throughput with k6/autocannon, achieving 44.81 ms average latency and 90 ms P95 latency.</li>
-            <li>Implemented webhook reliability checks with 92.24% completion delivery success.</li>
+            <li>Built a REST API for async background task processing that accepted jobs, tracked their status, and completed them reliably (99.89% request success).</li>
+            <li>Load tested with k6 and autocannon to confirm 44.81 ms average latency and 90 ms P95 under real traffic.</li>
+            <li>Added webhook delivery so callers were notified when jobs finished (92.24% delivery success).</li>
           </ul>
         </div>
 
@@ -120,9 +120,9 @@
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built and deployed a full-stack platform with React, Node.js REST APIs, PostgreSQL, and Docker for controlled release workflows.</li>
-            <li>Implemented real-time update and rule evaluation patterns for safer production changes.</li>
-            <li>Validated high-throughput behavior in performance tests up to ~380K-416K requests/min.</li>
+            <li>Built a feature flag platform with a React frontend and Node.js REST API so teams could gate and roll back features without redeploying.</li>
+            <li>Added real-time SSE updates and rule-based evaluation so flag changes took effect instantly and were easy to monitor.</li>
+            <li>Stress tested the API and sustained ~380K–416K requests/min, confirming production-scale throughput.</li>
           </ul>
         </div>
 
