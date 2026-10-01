@@ -15,7 +15,9 @@ npm-debug.log*
 node_modules/
 
 # Build output
-dist/
+dist/*
+!dist/
+!dist/*.js
 build/
 
 # Local env files

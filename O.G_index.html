@@ -1,241 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Javier Antonio Flores-Rendon - Resume</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; }
-
-    :root{
-      --paper-w: 8.5in;
-      --paper-h: 11in;
-      --page-pad-top: 0.35in;
-      --page-pad-x: 0.35in;
-      --page-pad-bottom: 0.35in;
-    }
-
-    html, body{
-      margin:0;
-      padding:0;
-      background:#e9e9e9;
-      color:#111;
-      font-family: Arial, Helvetica, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-
-    body{
-      padding:20px 0 28px;
-    }
-
-    .no-print{
-      text-align:center;
-      margin-bottom:12px;
-    }
-
-    .btn-download{
-      border:0;
-      border-radius:3px;
-      background:#111;
-      color:#fff;
-      padding:7px 16px;
-      font-size:12px;
-      cursor:pointer;
-    }
-
-    .btn-download:hover{ background:#2a2a2a; }
-
-    /* ---------- SCREEN PAGE ---------- */
-    .page{
-      width: var(--paper-w);
-      min-height: var(--paper-h);
-      margin: 0 auto 18px;
-      background: #fff;
-      padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
-      box-shadow: 0 0 0 1px rgba(0,0,0,0.06);
-      overflow: hidden;
-    }
-
-    /* Header specs from your image */
-    .resume-header{
-      text-align:center;
-      margin:0 0 10px;
-      line-height:1.2;
-    }
-
-    .resume-header h1{
-      margin:0 0 4px;
-      font-size:14pt;     /* required */
-      font-weight:700;    /* required */
-      line-height:1.2;   /* required */
-    }
-
-    .contact-line{
-      margin:0;
-      font-size:12pt;     /* required */
-      font-weight:400;    /* required */
-      line-height:1.2;   /* required */
-    }
-
-    .contact-line .sep{ margin:0 6px; color:#333; }
-
-    /* Everything below header */
-    main, section, .entry-title, .entry-meta, li, .skills-list li, .entry-sub{
-      font-size:10.5pt;   /* required */
-      line-height:1.5;    /* required */
-    }
-
-    section{
-      margin:0 0 10px;     /* single-space feel between sections */
-      page-break-inside:avoid;
-      break-inside:avoid;
-    }
-
-    .section-title{
-      margin:0 0 4px;
-      font-size:10.5pt;
-      font-weight:700;    /* bold only */
-      line-height:1.5;
-    }
-
-    .entry-header{
-      display:flex;
-      justify-content:space-between;
-      align-items:baseline;
-      gap:8px;
-      margin:0;           /* no extra space here */
-    }
-
-    .entry-title{
-      font-style:italic;  /* required */
-      font-weight:400;
-      margin:0;
-      flex:1;
-      min-width:0;
-    }
-
-    .entry-meta{
-      font-style:italic;  /* required */
-      font-weight:400;
-      margin-left:auto;
-      white-space:nowrap;
-      text-align:right;
-    }
-
-    ul{
-      margin:0;
-      padding-left:20px;
-    }
-
-    li{
-      margin:0;           /* avoid extra vertical spacing */
-      font-weight:400;
-    }
-
-    .exp-item{
-      margin:0 0 8px;     /* single-space between entries */
-    }
-    .exp-item:last-child{ margin-bottom:0; }
-
-    .skills-list{
-      list-style:none;
-      margin:0;
-      padding:0;
-    }
-
-    .skills-list li{
-      margin:0;
-    }
-
-    .entry-sub{
-      margin:4px 0 0;
-      font-weight:400;
-    }
-
-    .b{ font-weight:700; }
-
-    /* links should visually match plain text */
-    a, a:visited{
-      color:#111;
-      text-decoration:none;
-      font-weight:inherit;
-    }
-
-    /* prevent injected pseudo-icons; type symbols manually */
-    a[href^="mailto:"]::before,
-    a[href*="linkedin.com"]::before,
-    a[href*="github.com"]::before{ content:""; }
-
-    /* ---------- PRINT/PDF ---------- */
-    @media print{
-      @page{
-        size: Letter;
-        margin: 0.35in; /* match spacing target */
-      }
-
-      html, body{
-        background:#fff !important;
-      }
-
-      body{
-        padding:0;
-      }
-
-      .no-print{ display:none; }
-
-      .page{
-        width:auto;
-        min-height:0;
-        margin:0;
-        padding:0;
-        box-shadow:none;
-        background:#fff;
-        overflow:visible;
-      }
-
-      /* Force exact 2-page split */
-      .page.page-1{
-        page-break-after:always;
-        break-after:page;
-      }
-
-      .page.page-2{
-        page-break-before:always;
-        break-before:page;
-      }
-
-      /* Keep exact typography in print to avoid vertical squash */
-      .resume-header h1{ font-size:14pt; line-height:1.15; margin:0 0 2px; }
-      .contact-line{ font-size:12pt; line-height:1.15; margin:0; }
-
-      .section-title,
-      .entry-title,
-      .entry-meta,
-      li,
-      .skills-list li,
-      .entry-sub{
-        font-size:10.5pt !important;
-        line-height:1.5 !important;
-      }
-
-      section{ margin:0 0 6px; }
-      .exp-item{ margin:0 0 6px; }
-      ul{ margin:0; padding-left:18px; }
-
-      .exp-item, section, .entry-header, ul, li{
-        page-break-inside:avoid !important;
-        break-inside:avoid !important;
-      }
-
-      a{
-        color:#111 !important;
-        text-decoration:none !important;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./dist/theme-toggle.js" defer></script>
 </head>
-<body>
+<body class="resume-page">
   <div class="no-print">
     <button class="btn-download" onclick="window.print()">⬇ Save as PDF</button>
   </div>
@@ -275,8 +47,8 @@
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built and deployed a <span class="b">Java Spring Boot</span> backend service with <span class="b">RESTful APIs, SQL (PostgreSQL), Docker</span>, and cloud hosting to support reliable log/event ingestion at scale, sustaining <span class="b">~4.0K events/sec</span>.</li>
-            <li>Applied backend engineering and observability practices using <span class="b">Actuator</span>, health checks, and performance testing to validate production readiness, achieving <span class="b">2.8 ms p95 latency</span> with <span class="b">0% request failures</span> during k6 tests.</li>
+            <li><span class="b">Spring Boot, PostgreSQL, Docker</span> — deployed a log-ingestion API handling <span class="b">~4.0K events/sec</span>.</li>
+            <li><span class="b">Spring Actuator and k6</span> — verified readiness with <span class="b">2.8 ms p95 latency</span> and <span class="b">0% request failures</span>.</li>
             <li>Troubleshot and fixed deployment/runtime issues across <span class="b">Docker</span>, JDBC config, and environment routing to improve reliability and deliver consistent production operation.</li>
           </ul>
         </div>
@@ -311,7 +83,7 @@
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Built an Artificial Intelligence (A.I.) Incident Triage <span class="b">Copilot</span> with <span class="b">Python/FastAPI, PostgreSQL, Redis, Docker, and REST APIs</span> to process incident alerts through reliable <span class="b">REST APIs</span> in a production-style backend setup. Achieved 100% demo health/readiness success (/health, /ready).</li>
+            <li><span class="b">Python/FastAPI, PostgreSQL, Redis, Docker</span> — built an incident-triage API with <span class="b">100% demo health/readiness success</span>.</li>
             <li>Implemented A.I.-style triage intelligence for severity prediction, duplicate detection, and runbook recommendation, achieving 3/3 inference field coverage on triage output.</li>
             <li>Validated an end-to-end incident workflow (ingest → triage → persist → retrieve) with 100% demo execution success using POST /incidents/triage and GET /incidents/{incident_id}.</li>
           </ul>
