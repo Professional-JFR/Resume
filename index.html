@@ -3,49 +3,256 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resume Versions - Javier Antonio Flores-Rendon</title>
+  <title>Javier Antonio Flores-Rendon - Software Engineer Resume Hub</title>
+  <meta name="description" content="Javier Antonio Flores-Rendon - Software Engineer resume hub. Role-targeted resumes (FAANG, Full-Stack, Python, Java, AI, Data, Embedded, .NET) plus live project links for SignalFlow, AsyncTaskEngine, ShipSafeFlags, and A.I. Incident Triage." />
+  <meta name="theme-color" content="#0d1117" />
   <style>
+    *, *::before, *::after{ box-sizing:border-box; }
+
+    :root{
+      --bg:#0d1117;
+      --bg-elev:#161b22;
+      --border:#30363d;
+      --text:#e6edf3;
+      --text-muted:#9da7b3;
+      --accent:#58a6ff;
+      --accent-soft:rgba(88,166,255,0.12);
+    }
+
+    html, body{
+      margin:0; padding:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:"Segoe UI", Arial, Helvetica, sans-serif;
+      -webkit-font-smoothing:antialiased;
+    }
+
     body{
-      margin:0;
-      font-family: Arial, Helvetica, sans-serif;
-      background:#f4f4f4;
-      color:#111;
+      min-height:100vh;
+      padding:40px 16px 56px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .wrap{ width:min(920px, 100%); }
+
+    .intro{
+      background:var(--bg-elev);
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:28px 32px;
+      margin-bottom:28px;
+    }
+
+    .intro h1{ margin:0 0 6px; font-size:28px; font-weight:700; }
+    .intro .title{ margin:0 0 14px; color:var(--accent); font-size:15px; font-weight:600; letter-spacing:0.3px; }
+
+    .contact-line{ margin:0; font-size:14px; color:var(--text-muted); line-height:1.8; }
+    .contact-line a{ color:var(--text); text-decoration:none; border-bottom:1px solid var(--accent); }
+    .contact-line a:hover{ color:var(--accent); }
+    .contact-line .sep{ margin:0 8px; color:var(--border); }
+
+    section.block{ margin-bottom:28px; }
+
+    h2.section-title{
+      font-size:13px;
+      text-transform:uppercase;
+      letter-spacing:1.2px;
+      color:var(--text-muted);
+      margin:0 0 14px;
+      padding-bottom:8px;
+      border-bottom:1px solid var(--border);
+    }
+
+    .resume-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill, minmax(260px, 1fr));
+      gap:12px;
+    }
+
+    .resume-card{
+      display:block;
+      background:var(--bg-elev);
+      border:1px solid var(--border);
+      border-radius:10px;
+      padding:16px 18px;
+      color:var(--text);
+      text-decoration:none;
+      transition:border-color 0.15s ease, transform 0.15s ease, background 0.15s ease;
+    }
+
+    .resume-card:hover{
+      border-color:var(--accent);
+      background:var(--accent-soft);
+      transform:translateY(-2px);
+    }
+
+    .resume-card .name{ font-weight:600; font-size:15px; }
+    .resume-card .desc{ display:block; margin-top:4px; font-size:12.5px; color:var(--text-muted); }
+
+    .project-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+      gap:14px;
+    }
+
+    .project-card{
+      background:var(--bg-elev);
+      border:1px solid var(--border);
+      border-radius:10px;
+      padding:18px 20px;
+    }
+
+    .project-card .project-head{
       display:flex;
       align-items:center;
-      justify-content:center;
-      min-height:100vh;
+      justify-content:space-between;
+      gap:8px;
+      margin-bottom:8px;
     }
-    .card{
-      background:#fff;
-      border:1px solid #ddd;
-      border-radius:8px;
-      padding:24px;
-      width:min(680px, 92vw);
+
+    .project-card .project-name{ font-weight:700; font-size:15px; }
+    .project-card .project-name a{ color:var(--text); text-decoration:none; }
+    .project-card .project-name a:hover{ color:var(--accent); }
+
+    .badge{
+      font-size:10.5px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:0.4px;
+      padding:2px 8px;
+      border-radius:999px;
+      background:var(--accent-soft);
+      color:var(--accent);
+      white-space:nowrap;
     }
-    h1{ margin:0 0 8px; font-size:24px; }
-    p{ margin:0 0 18px; color:#333; }
-    ul{ margin:0; padding-left:18px; }
-    li{ margin:10px 0; font-size:16px; }
-    a{ color:#111; text-decoration:none; border-bottom:1px solid #111; }
-    a:hover{ opacity:0.8; }
+
+    .project-stack{ font-size:12px; color:var(--text-muted); margin:0 0 8px; }
+    .project-note{ font-size:13px; line-height:1.5; margin:0; color:var(--text); }
+    .project-note strong{ color:var(--accent); }
+
+    footer{
+      margin-top:12px;
+      text-align:center;
+      font-size:12px;
+      color:var(--text-muted);
+    }
   </style>
 </head>
 <body>
-  <main class="card">
-    <h1>Javier Antonio Flores-Rendon</h1>
-    <p>Select a resume version:</p>
-    <ul>
-      <li><a href="./O.G_index.html">Original Software Engineering Resume</a></li>
-      <li><a href="./resume-general.html">General Software Engineering Resume</a></li>
-      <li><a href="./index-faang.html">FAANG / Top-Tier SWE Resume</a></li>
-      <li><a href="./index-fullstack.html">Full-Stack Software Engineer Resume</a></li>
-      <li><a href="./index-python.html">Backend Python Software Engineer Resume</a></li>
-      <li><a href="./index-java.html">Backend Java Software Engineer Resume</a></li>
-      <li><a href="./index-ai.html">AI Software Engineer Resume</a></li>
-      <li><a href="./index-data.html">Data Engineer Resume</a></li>
-      <li><a href="./index-embedded.html">Embedded Software Engineer Resume</a></li>
-      <li><a href="./index-dotnet.html">C# / .NET Software Engineer Resume</a></li>
-    </ul>
-  </main>
+  <div class="wrap">
+    <header class="intro">
+      <h1>Javier Antonio Flores-Rendon</h1>
+      <p class="title">Software Engineer</p>
+      <p class="contact-line">
+        Tempe, AZ
+        <span class="sep">|</span>
+        <a href="mailto:javierflores789@gmail.com">javierflores789@gmail.com</a>
+        <span class="sep">|</span>
+        (602) 366-0216
+        <span class="sep">|</span>
+        <a href="https://www.linkedin.com/in/javier-flores-rendon-437a43194/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span class="sep">|</span>
+        <a href="https://github.com/Professional-JFR" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </p>
+    </header>
+
+    <section class="block">
+      <h2 class="section-title">Resume Versions</h2>
+      <div class="resume-grid">
+        <a class="resume-card" href="./resume-general.html">
+          <span class="name">General Software Engineering</span>
+          <span class="desc">Broad SWE summary with full project list</span>
+        </a>
+        <a class="resume-card" href="./index-faang.html">
+          <span class="name">FAANG / Top-Tier SWE</span>
+          <span class="desc">Scale, performance, and systems focus</span>
+        </a>
+        <a class="resume-card" href="./index-fullstack.html">
+          <span class="name">Full-Stack Software Engineer</span>
+          <span class="desc">Frontend + backend end-to-end delivery</span>
+        </a>
+        <a class="resume-card" href="./index-python.html">
+          <span class="name">Backend Python Engineer</span>
+          <span class="desc">FastAPI, async, REST API experience</span>
+        </a>
+        <a class="resume-card" href="./index-java.html">
+          <span class="name">Backend Java Engineer</span>
+          <span class="desc">Spring Boot, observability, APIs</span>
+        </a>
+        <a class="resume-card" href="./index-ai.html">
+          <span class="name">AI Software Engineer</span>
+          <span class="desc">Inference, triage, and ML-adjacent work</span>
+        </a>
+        <a class="resume-card" href="./index-data.html">
+          <span class="name">Data Engineer</span>
+          <span class="desc">Pipelines, PostgreSQL, data modeling</span>
+        </a>
+        <a class="resume-card" href="./index-embedded.html">
+          <span class="name">Embedded Software Engineer</span>
+          <span class="desc">Reliability and structured data paths</span>
+        </a>
+        <a class="resume-card" href="./index-dotnet.html">
+          <span class="name">C# / .NET Software Engineer</span>
+          <span class="desc">.NET-aligned backend transferable skills</span>
+        </a>
+        <a class="resume-card" href="./O.G_index.html">
+          <span class="name">Original Resume</span>
+          <span class="desc">Baseline, unfiltered version</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2 class="section-title">Latest Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <div class="project-head">
+            <span class="project-name">↗ <a href="https://github.com/Professional-JFR/A.I.-Incident-Triage" target="_blank" rel="noopener noreferrer">A.I. Incident Triage</a></span>
+            <span class="badge">Updated</span>
+          </div>
+          <p class="project-stack">Python · FastAPI · PostgreSQL · Redis · Docker</p>
+          <p class="project-note">Recently improved with stronger <strong>error handling</strong>, <strong>input validation</strong>, and structured <strong>logging</strong> for cache/database resilience.</p>
+        </div>
+
+        <div class="project-card">
+          <div class="project-head">
+            <span class="project-name">↗ <a href="https://github.com/Professional-JFR/Resume" target="_blank" rel="noopener noreferrer">Resume Hub</a></span>
+            <span class="badge">Current</span>
+          </div>
+          <p class="project-stack">HTML · CSS · GitHub Pages</p>
+          <p class="project-note">This site — role-targeted, print-ready resumes with a project showcase for recruiters.</p>
+        </div>
+
+        <div class="project-card">
+          <div class="project-head">
+            <span class="project-name">↗ <a href="https://github.com/Professional-JFR/AsyncTaskEngine" target="_blank" rel="noopener noreferrer">AsyncTaskEngine</a></span>
+          </div>
+          <p class="project-stack">Python · Background Workers · REST APIs</p>
+          <p class="project-note">Background task engine that keeps user-facing apps responsive by running long jobs outside the request flow.</p>
+        </div>
+
+        <div class="project-card">
+          <div class="project-head">
+            <span class="project-name">↗ <a href="https://github.com/Professional-JFR/ShipSafeFlags" target="_blank" rel="noopener noreferrer">ShipSafeFlags</a></span>
+          </div>
+          <p class="project-stack">TypeScript · Node.js · React · PostgreSQL</p>
+          <p class="project-note">Feature-flag platform for safe rollout/rollback, sustaining ~380K–416K requests/min in load tests.</p>
+        </div>
+
+        <div class="project-card">
+          <div class="project-head">
+            <span class="project-name">↗ <a href="https://github.com/Professional-JFR/SignalFlow" target="_blank" rel="noopener noreferrer">SignalFlow</a></span>
+          </div>
+          <p class="project-stack">Java · Spring Boot · PostgreSQL · Docker</p>
+          <p class="project-note">Backend service exposing real-time health and metrics so teams can detect and fix problems faster.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Tip: Open any resume and press <strong>Ctrl+P</strong> (or <strong>Cmd+P</strong>) → Save as PDF to download.
+    </footer>
+  </div>
 </body>
 </html>
