@@ -1,4 +1,4 @@
-# 🧑‍💻 Javier's Resume Hub
+# 🧑‍💻 Personal's Resume Hub
 
 This repository hosts multiple tailored resume versions for different Software Engineering roles, plus an original baseline resume, and a live project showcase.
 
