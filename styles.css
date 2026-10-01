@@ -1,0 +1,517 @@
+:root {
+  --paper-w: 8.5in;
+  --paper-h: 11in;
+  --page-pad-top: 0.35in;
+  --page-pad-x: 0.35in;
+  --page-pad-bottom: 0.35in;
+  --canvas: #e9e9e9;
+  --paper: #fff;
+  --text: #111;
+  --text-muted: #333;
+  --accent: #0969da;
+  --border: #d0d7de;
+  --accent-soft: rgba(9, 105, 218, 0.12);
+  --hub-bg: #f6f8fa;
+  --hub-elev: #fff;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --canvas: #0d1117;
+  --paper: #161b22;
+  --text: #e6edf3;
+  --text-muted: #9da7b3;
+  --accent: #58a6ff;
+  --border: #30363d;
+  --accent-soft: rgba(88, 166, 255, 0.12);
+  --hub-bg: #0d1117;
+  --hub-elev: #161b22;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body.resume-page {
+    margin: 0;
+    padding: 20px 0 28px;
+    background: var(--canvas);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+body.resume-page .no-print {
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+body.resume-page .btn-download {
+    border: 0;
+    border-radius: 3px;
+    background: var(--text);
+    color: var(--paper);
+    padding: 7px 16px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+body.resume-page .btn-download:hover {
+    opacity: 0.8;
+  }
+
+body.resume-page .page {
+    width: var(--paper-w);
+    min-height: var(--paper-h);
+    margin: 0 auto 18px;
+    background: var(--paper);
+    color: var(--text);
+    padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+  }
+
+body.resume-page .resume-header {
+    text-align: center;
+    margin: 0 0 10px;
+    line-height: 1.2;
+  }
+
+body.resume-page .resume-header h1 {
+    margin: 0 0 4px;
+    font-size: 14pt;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+body.resume-page .contact-line {
+    margin: 0;
+    font-size: 12pt;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+body.resume-page .contact-line .sep {
+    margin: 0 6px;
+    color: var(--text-muted);
+  }
+
+body.resume-page main,
+body.resume-page section,
+body.resume-page .entry-title,
+body.resume-page .entry-meta,
+body.resume-page li,
+body.resume-page .skills-list li,
+body.resume-page .entry-sub {
+    font-size: 10.5pt;
+    line-height: 1.5;
+  }
+
+body.resume-page section {
+    margin: 0 0 10px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+body.resume-page .section-title {
+    margin: 0 0 4px;
+    font-size: 10.5pt;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+body.resume-page .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+    margin: 0;
+  }
+
+body.resume-page .entry-title {
+    font-style: italic;
+    font-weight: 400;
+    margin: 0;
+    flex: 1;
+    min-width: 0;
+  }
+
+body.resume-page .entry-meta {
+    font-style: italic;
+    font-weight: 400;
+    margin-left: auto;
+    white-space: nowrap;
+    text-align: right;
+  }
+
+body.resume-page ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+body.resume-page li {
+    margin: 0;
+    font-weight: 400;
+  }
+
+body.resume-page .exp-item {
+    margin: 0 0 8px;
+  }
+
+body.resume-page .exp-item:last-child {
+    margin-bottom: 0;
+  }
+
+body.resume-page .skills-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+body.resume-page .skills-list li {
+    margin: 0;
+  }
+
+body.resume-page .entry-sub {
+    margin: 4px 0 0;
+    font-weight: 400;
+  }
+
+body.resume-page .b {
+    font-weight: 700;
+  }
+
+body.resume-page a,
+body.resume-page a:visited {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: inherit;
+  }
+
+body.resume-page a[href^="mailto:"]::before,
+body.resume-page a[href*="linkedin.com"]::before,
+body.resume-page a[href*="github.com"]::before {
+    content: "";
+  }
+
+@media print {
+    :root {
+      --canvas: #fff;
+      --paper: #fff;
+      --text: #111;
+      --text-muted: #333;
+      --accent: #111;
+      --border: #333;
+    }
+
+    @page {
+      size: Letter;
+      margin: 0.30in;
+    }
+
+    body.resume-page {
+      padding: 0;
+      background: #fff !important;
+      color: #111 !important;
+    }
+
+    body.resume-page .no-print,
+    body.resume-page .theme-toggle {
+      display: none !important;
+    }
+
+    body.resume-page .page {
+      width: auto;
+      min-height: 0;
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+      background: #fff !important;
+      color: #111 !important;
+      overflow: visible;
+    }
+
+    body.resume-page .page.page-1 {
+      page-break-after: always;
+      break-after: page;
+    }
+
+    body.resume-page .page.page-2 {
+      page-break-before: always;
+      break-before: page;
+    }
+
+    body.resume-page .resume-header h1 {
+      font-size: 13.2pt;
+      line-height: 1.12;
+      margin: 0 0 2px;
+    }
+
+    body.resume-page .contact-line {
+      font-size: 10.8pt;
+      line-height: 1.12;
+      margin: 0;
+    }
+
+    body.resume-page .section-title,
+    body.resume-page .entry-title,
+    body.resume-page .entry-meta,
+    body.resume-page li,
+    body.resume-page .skills-list li,
+    body.resume-page .entry-sub {
+      font-size: 9.85pt !important;
+      line-height: 1.32 !important;
+    }
+
+    body.resume-page section {
+      margin: 0 0 4px;
+    }
+
+    body.resume-page .exp-item {
+      margin: 0 0 4px;
+    }
+
+    body.resume-page ul {
+      margin: 0;
+      padding-left: 16px;
+    }
+
+    body.resume-page .exp-item,
+    body.resume-page section,
+    body.resume-page .entry-header,
+    body.resume-page ul,
+    body.resume-page li {
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+    }
+
+    body.resume-page a {
+      color: #111 !important;
+      text-decoration: none !important;
+    }
+}
+
+body.hub-page {
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 16px 56px;
+    display: flex;
+    justify-content: center;
+    background: var(--hub-bg);
+    color: var(--text);
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+body.hub-page .wrap {
+    width: min(920px, 100%);
+  }
+
+body.hub-page .intro {
+    background: var(--hub-elev);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 28px;
+  }
+
+body.hub-page .intro h1 {
+    margin: 0 0 6px;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+body.hub-page .intro .title {
+    margin: 0 0 14px;
+    color: var(--accent);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+
+body.hub-page .contact-line {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+
+body.hub-page .contact-line a {
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+  }
+
+body.hub-page .contact-line a:hover {
+    color: var(--accent);
+  }
+
+body.hub-page .contact-line .sep {
+    margin: 0 8px;
+    color: var(--border);
+  }
+
+body.hub-page section.block {
+    margin-bottom: 28px;
+  }
+
+body.hub-page h2.section-title {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--text-muted);
+    margin: 0 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+body.hub-page .resume-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 12px;
+  }
+
+body.hub-page .resume-card {
+    display: block;
+    background: var(--hub-elev);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    color: var(--text);
+    text-decoration: none;
+    transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease;
+  }
+
+body.hub-page .resume-card:hover {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+    transform: translateY(-2px);
+  }
+
+body.hub-page .resume-card .name {
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+body.hub-page .resume-card .desc {
+    display: block;
+    margin-top: 4px;
+    font-size: 12.5px;
+    color: var(--text-muted);
+  }
+
+body.hub-page .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 14px;
+  }
+
+body.hub-page .project-card {
+    background: var(--hub-elev);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+  }
+
+body.hub-page .project-card .project-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+body.hub-page .project-card .project-name {
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+body.hub-page .project-card .project-name a {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+body.hub-page .project-card .project-name a:hover {
+    color: var(--accent);
+  }
+
+body.hub-page .badge {
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
+body.hub-page .project-stack {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin: 0 0 8px;
+  }
+
+body.hub-page .project-note {
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0;
+    color: var(--text);
+  }
+
+body.hub-page .project-note strong {
+    color: var(--accent);
+  }
+
+body.hub-page .project-stats {
+    margin: 8px 0 0;
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+body.hub-page footer {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+body.resume-page .page,
+body.hub-page .intro,
+body.hub-page .resume-card,
+body.hub-page .project-card {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-toggle {
+  position: fixed;
+  z-index: 10;
+  top: 16px;
+  right: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: var(--hub-elev);
+  color: var(--text);
+  font: inherit;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+html, body {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+@media print {
+  .theme-toggle {
+    display: none !important;
+  }
+}

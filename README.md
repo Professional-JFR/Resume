@@ -18,6 +18,22 @@ Every resume page includes a **"Save as PDF"** button, or you can do it manually
 
 Print styles are tuned so each resume fits cleanly onto one or two pages.
 
+## 🛠️ Building the Project
+
+The pages are static HTML, with TypeScript compiled to browser JavaScript in `dist/`.
+
+```sh
+npm install
+npm run build
+```
+
+The build uses the TypeScript compiler configured in `tsconfig.json`. The generated `dist/*.js` files are kept in the repository so GitHub Pages can serve the interactive features without a server-side build step.
+
+## ✨ Interactive Features
+
+- **Theme toggle:** Switch between light and dark themes on the landing page and every resume. The selection is saved in local storage and shared across pages.
+- **GitHub project stats:** The landing page fetches public repository descriptions, commit counts, update dates, stars, and watchers from the GitHub API. Results are cached in local storage for five minutes; the rest of each page remains available if the API is unavailable.
+
 ## 📄 Resume Versions
 
 From the landing page, recruiters can choose:
@@ -110,6 +126,8 @@ The landing page (`index.html`) highlights active project work, linked directly 
 
 - **HTML5**
 - **CSS3**
+- **TypeScript**
+- **JavaScript**
 - **Git & GitHub**
 - **GitHub Pages**
 
@@ -145,4 +163,3 @@ The landing page (`index.html`) highlights active project work, linked directly 
 **URL Links**
 - GitHub: `https://github.com/Professional-JFR`
 - LinkedIn: `https://www.linkedin.com/in/javier-flores-rendon-437a43194/`
-

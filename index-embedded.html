@@ -1,57 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Javier Antonio Flores-Rendon - Resume (Embedded Software Engineer)</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; }
-    :root{ --paper-w: 8.5in; --paper-h: 11in; --page-pad-top: 0.35in; --page-pad-x: 0.35in; --page-pad-bottom: 0.35in; }
-    html, body{ margin:0; padding:0; background:#e9e9e9; color:#111; font-family: Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
-    body{ padding:20px 0 28px; }
-    .no-print{ text-align:center; margin-bottom:12px; }
-    .btn-download{ border:0; border-radius:3px; background:#111; color:#fff; padding:7px 16px; font-size:12px; cursor:pointer; }
-    .btn-download:hover{ background:#2a2a2a; }
-    .page{ width: var(--paper-w); min-height: var(--paper-h); margin: 0 auto 18px; background: #fff; padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom); box-shadow: 0 0 0 1px rgba(0,0,0,0.06); overflow: hidden; }
-    .resume-header{ text-align:center; margin:0 0 10px; line-height:1.2; }
-    .resume-header h1{ margin:0 0 4px; font-size:14pt; font-weight:700; line-height:1.2; }
-    .contact-line{ margin:0; font-size:12pt; font-weight:400; line-height:1.2; }
-    .contact-line .sep{ margin:0 6px; color:#333; }
-    main, section, .entry-title, .entry-meta, li, .skills-list li, .entry-sub{ font-size:10.5pt; line-height:1.5; }
-    section{ margin:0 0 10px; page-break-inside:avoid; break-inside:avoid; }
-    .section-title{ margin:0 0 4px; font-size:10.5pt; font-weight:700; line-height:1.5; }
-    .entry-header{ display:flex; justify-content:space-between; align-items:baseline; gap:8px; margin:0; }
-    .entry-title{ font-style:italic; font-weight:400; margin:0; flex:1; min-width:0; }
-    .entry-meta{ font-style:italic; font-weight:400; margin-left:auto; white-space:nowrap; text-align:right; }
-    ul{ margin:0; padding-left:20px; }
-    li{ margin:0; font-weight:400; }
-    .exp-item{ margin:0 0 8px; }
-    .exp-item:last-child{ margin-bottom:0; }
-    .skills-list{ list-style:none; margin:0; padding:0; }
-    .skills-list li{ margin:0; }
-    .entry-sub{ margin:4px 0 0; font-weight:400; }
-    a, a:visited{ color:#111; text-decoration:none; font-weight:inherit; }
-    a[href^="mailto:"]::before, a[href*="linkedin.com"]::before, a[href*="github.com"]::before{ content:""; }
-    @media print{
-      @page{ size: Letter; margin: 0.30in; }
-      html, body{ background:#fff !important; }
-      body{ padding:0; }
-      .no-print{ display:none; }
-      .page{ width:auto; min-height:0; margin:0; padding:0; box-shadow:none; background:#fff; overflow:visible; }
-      .page.page-1{ page-break-after:always; break-after:page; }
-      .page.page-2{ page-break-before:always; break-before:page; }
-      .resume-header h1{ font-size:13.2pt; line-height:1.12; margin:0 0 2px; }
-      .contact-line{ font-size:10.8pt; line-height:1.12; margin:0; }
-      .section-title, .entry-title, .entry-meta, li, .skills-list li, .entry-sub{ font-size:9.85pt !important; line-height:1.32 !important; }
-      section{ margin:0 0 4px; }
-      .exp-item{ margin:0 0 4px; }
-      ul{ margin:0; padding-left:16px; }
-      .exp-item, section, .entry-header, ul, li{ page-break-inside:avoid !important; break-inside:avoid !important; }
-      a{ color:#111 !important; text-decoration:none !important; }
-    }
-  </style>
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./dist/theme-toggle.js" defer></script>
 </head>
-<body>
+<body class="resume-page">
   <div class="no-print"><button class="btn-download" onclick="window.print()">⬇ Save as PDF</button></div>
 
   <div class="page page-1">
@@ -123,7 +79,7 @@
             <span class="entry-meta">2026</span>
           </div>
           <ul>
-            <li>Python/FastAPI backend with PostgreSQL, Redis, and Docker for AI-assisted triage — applying structured data transformation and reliability patterns familiar to embedded data-path design.</li>
+            <li><strong>Python/FastAPI, PostgreSQL, Redis:</strong> Structured incident-triage pipeline with embedded-style data-path reliability.</li>
             <li>Validated the end-to-end event pipeline (ingest → classify → persist → retrieve) with 100% health-check success.</li>
           </ul>
         </div>
