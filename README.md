@@ -1,165 +1,51 @@
-# 🧑‍💻 Personal's Resume Hub
+# Resume & Portfolio Hub
 
-This repository hosts multiple tailored resume versions for different Software Engineering roles, plus an original baseline resume, and a live project showcase.
+This repository is a personal resume and portfolio site built to present role-specific experience and selected software projects in one clear, recruiter-friendly place. It pairs a lightweight static site with thoughtful accessibility, print, and validation details—without introducing a server-side framework.
 
-## 🌐 Live Site
+**Live site:** [professional-jfr.github.io/Resume](https://professional-jfr.github.io/Resume/)
 
-- **Landing Page:** `index.html`
-- **GitHub Pages URL:** 👉 **https://professional-jfr.github.io/Resume/**
+## What’s included
 
-## 🖨️ Saving a Resume as PDF
+- A landing page that organizes resume options and highlights selected projects.
+- Role-targeted resume pages for general software engineering, full-stack, Python, Java, AI, data, embedded, and .NET roles, alongside an original resume.
+- Print-ready layouts and a save-to-PDF flow for sharing resumes offline.
+- Optional client-side theme switching and GitHub project statistics.
 
-Every resume page includes a **"Save as PDF"** button, or you can do it manually:
+## Tech stack
 
-1. Open the resume page you want (e.g. `resume-general.html`).
-2. Press **Ctrl+P** (Windows/Linux) or **Cmd+P** (Mac).
-3. Set destination to **"Save as PDF"**.
-4. Click **Save**.
+- **HTML** for page structure and content
+- **CSS** for shared, responsive screen and print styling
+- **TypeScript** for typed browser-side interactions, compiled to JavaScript
+- **GitHub Pages** for static site hosting
+- **GitHub Actions** for continuous integration
 
-Print styles are tuned so each resume fits cleanly onto one or two pages.
+## Engineering highlights
 
-## 🛠️ Building the Project
+- Accessibility-minded markup, labeled controls, visible keyboard focus, and reduced-motion support.
+- Landing-page SEO metadata, social-sharing tags, and structured data.
+- Shared styling across resume pages, with layouts adapted for print.
+- A site-check script validates page metadata and local references; `npm test` runs it after the TypeScript build.
+- CI runs the build and site checks, and verifies that committed generated JavaScript is up to date.
+- GitHub project statistics are loaded client-side and cached, while resume content remains usable if the API is unavailable.
 
-The pages are static HTML, with TypeScript compiled to browser JavaScript in `dist/`.
+## Why this project is portfolio-worthy
+
+This is both a personal brand experience and a small production-minded web project. It demonstrates how to present information for different audiences while keeping the implementation lightweight, accessible, maintainable, and easy to validate. The result gives recruiters a direct path from the portfolio overview to relevant experience and project work.
+
+## Local development
+
+Requires Node.js and npm.
 
 ```sh
-npm install
+npm ci
 npm run build
+npm test
 ```
 
-The build uses the TypeScript compiler configured in `tsconfig.json`. The generated `dist/*.js` files are kept in the repository so GitHub Pages can serve the interactive features without a server-side build step.
+The TypeScript build writes browser JavaScript to `dist/`; those generated files are committed so the static site can serve the interactions directly.
 
-## ✨ Interactive Features
+## Possible future improvements
 
-- **Theme toggle:** Switch between light and dark themes on the landing page and every resume. The selection is saved in local storage and shared across pages.
-- **GitHub project stats:** The landing page fetches public repository descriptions, commit counts, update dates, stars, and watchers from the GitHub API. Results are cached in local storage for five minutes; the rest of each page remains available if the API is unavailable.
-
-## 📄 Resume Versions
-
-From the landing page, recruiters can choose:
-
-1. **Original Resume**
-   - `O.G_index.html`
-
-2. **General Software Engineering Resume**
-   - `resume-general.html`
-
-3. **FAANG / Top-Tier SWE Resume**
-   - `index-faang.html`
-
-4. **Full-Stack Software Engineer Resume**
-   - `index-fullstack.html`
-
-5. **Backend Python Software Engineer Resume**
-   - `index-python.html`
-
-6. **Backend Java Software Engineer Resume**
-   - `index-java.html`
-
-7. **AI Software Engineer Resume**
-   - `index-ai.html`
-
-8. **Data Engineer Resume**
-   - `index-data.html`
-
-9. **Embedded Software Engineer Resume**
-   - `index-embedded.html`
-
-10. **C# / .NET Software Engineer Resume**
-    - `index-dotnet.html`
-
-## 🚀 Latest Projects
-
-The landing page (`index.html`) highlights active project work, linked directly to GitHub:
-
-- **A.I. Incident Triage** (Python/FastAPI) — recently improved with error handling, input validation, and structured logging.
-- **Resume Hub** (HTML/CSS) — this site.
-- **AsyncTaskEngine** (Python) — background task processing.
-- **ShipSafeFlags** (TypeScript) — feature-flag platform.
-- **SignalFlow** (Java) — observability/metrics service.
-
----
-
-## 🛠️ What Was Built
-
-### 1) Multi-Resume Navigation Hub
-- Created a dark-themed, professional landing page (`index.html`) with an intro/contact section and links to each role-specific resume.
-- Preserved a clean UI for fast recruiter navigation.
-
-### 2) Role-Targeted Resume Variants
-- Built separate HTML resume versions for ten distinct engineering roles.
-- Kept formatting and styling consistent across all versions.
-- Each variant leads with the most relevant keywords and stack for that role.
-
-### 3) Recruiter-Friendly Bullet Style
-- Bullets follow a keyword-first formula: system/technology → plain-English explanation → metric or result.
-- Short, scannable sentences so a recruiter can identify role fit in a few seconds.
-- Metrics preserved where available (latency, throughput, success rates).
-
-### 4) Content Optimization for ATS + Recruiters
-- Added role-relevant keywords in skills and experience bullets.
-- Maintained truth-based wording aligned to completed projects.
-- Added an SEO-friendly `<meta name="description">` tag on the landing page summarizing available resumes and projects.
-- Emphasized production signals:
-  - deployed
-  - production-ready
-  - REST API
-  - PostgreSQL
-  - Docker
-  - CI/CD
-  - cloud deployment
-
-### 5) Print/PDF Layout Tuning
-- Updated print CSS for better two-page fit while preserving readability.
-- Maintained:
-  - page 1 focus on summary + education + relevant experience
-  - page 2 focus on skills + additional background
-- Added tighter print spacing and font sizing to reduce overflow risk.
-
-### 6) Live Project Showcase
-- Added a "Latest Projects" section to the landing page linking directly to active GitHub repositories.
-- Signals ongoing, real development activity to recruiters.
-
----
-
-## 🧰 Technical Stack Used
-
-- **HTML5**
-- **CSS3**
-- **TypeScript**
-- **JavaScript**
-- **Git & GitHub**
-- **GitHub Pages**
-
----
-
-## 📁 Repository File Overview
-
-- `index.html` → Dark-themed resume selection landing page + Latest Projects showcase
-- `O.G_index.html` → Original baseline resume
-- `resume-general.html` → General SWE resume
-- `index-faang.html` → FAANG / Top-Tier SWE resume
-- `index-fullstack.html` → Full-Stack SWE resume
-- `index-python.html` → Backend Python SWE resume
-- `index-java.html` → Backend Java SWE resume
-- `index-ai.html` → AI Software Engineer resume
-- `index-data.html` → Data Engineer resume
-- `index-embedded.html` → Embedded Software Engineer resume
-- `index-dotnet.html` → C# / .NET Software Engineer resume
-- `.gitignore` → Standard web project ignores
-- `README.md` → Project documentation
-
----
-
-## 📝 Notes
-
-- If links fail on GitHub Pages, verify file names and casing exactly match references in `index.html`.
-- Root URL must use `index.html` (GitHub Pages default entry point).
-
----
-
-## 👤 Maintainer
-
-**URL Links**
-- GitHub: `https://github.com/Professional-JFR`
-- LinkedIn: `https://www.linkedin.com/in/javier-flores-rendon-437a43194/`
+- Move repeated resume content into typed data and generate the role-specific pages.
+- Add Lighthouse CI to track accessibility, performance, and SEO over time.
+- Add a sitemap, `robots.txt`, canonical URLs, and a social preview image.
