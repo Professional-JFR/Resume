@@ -2,7 +2,9 @@
   "name": "resume-hub",
   "private": true,
   "scripts": {
-    "build": "tsc --project tsconfig.json"
+    "build": "tsc --project tsconfig.json",
+    "check": "node scripts/check-site.js",
+    "test": "npm run build && npm run check"
   },
   "devDependencies": {
     "typescript": "5.9.3"
